@@ -1,1 +1,1 @@
-Projetos simples para retorno dos estudos de programação
+Projetos simples para retorno dos estudos de programação ;)
