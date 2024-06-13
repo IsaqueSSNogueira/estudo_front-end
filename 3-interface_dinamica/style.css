@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {padding:0; margin:0; box-sizing: border-box; text-decoration:none; font-size:100%; outline:none; font-family: "Poppins", sans-serif;}
+
+/* cabeçalho */
+header {
+    padding:0 80px;
+    width:100vw;
+    height:70px;
+    background:gainsboro;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+/* logo */
+#linklogo {
+    display:flex;
+    align-items: center;
+    gap:10px;
+    font-size:1.5rem;
+    color:black;
+    font-weight:bold;
+}
+
+#logo-img {
+    width:80px;
+}
+
+#logonome {
+    margin-top: 15px;
+}
+
+/* pesquisa */
+
+#areapesquisa {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+#pesquisa {
+    background:white;
+    width:360px;
+    height:45px;
+    border-radius: 25px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    margin-right:20px;
+    cursor:pointer;
+}
+
+#campopesquisa {
+    width:320px;
+    height:45px;
+    font-size: 1.1rem;
+    border:none;
+    padding:20px; /*adaptar com o conteúdo*/
+    margin-right:5px;
+    border-radius:25px 0 0 25px;
+}
+
+/* mudar tema */
+#escolhertema {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background-image:linear-gradient(to bottom right,  rgba(2,0,36,1) 31%, rgba(255,154,215,1) 100%);
+    cursor:pointer;
+}
+
+
+/* nav */
+#menu {
+    height:50px;
+    background-color:#0D072C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#linksmenu {
+    list-style:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+#linksmenu a {
+    font-size:1.2rem;
+    color:white;
+    padding:15px 40px;
+    transition: 0.3s all ease-in-out;
+}
+
+#linksmenu a:hover {
+    color:#aa74c2;
+}
+
+#linksmenu a:active {
+    color: #593b65;
+}
+
+
+
+/* responsivo */
+
+
