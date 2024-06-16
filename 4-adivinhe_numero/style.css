@@ -1,0 +1,140 @@
+* {padding:0; margin:0; box-sizing:border-box; font-size:100%; text-decoration: none; outline:none}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background: linear-gradient(to bottom right, rgba(2,0,36,1) 31%, rgba(192,38,70,1) 100%);
+}
+
+main {
+    width:400px;
+    border:1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    flex-direction:column;
+    margin-bottom:50px;
+    background-image: url("img/fundo.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transform: scale(1.3); /* aumentei o tamanho */
+    border-radius:0 30px 0 30px;
+}
+
+main::after {
+    content: "";
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.2);
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius:0 30px 0px 30px;
+}
+
+h1 {
+    font-size: 1.7rem;
+    padding:40px 0 30px 0;
+    color:white;
+    z-index:10;
+}
+
+mark {
+    background-color: rgba(18, 18, 18, 0.1);
+    color:white;
+    padding:5px;
+}
+
+#container1 {
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    align-items: center;
+    width:70%;
+    height:30px;
+    z-index:10;
+}
+
+#campo {
+    padding:7px 0;
+    width:100px;
+    text-align: center;
+    background-color:#fefafa;
+    border:white 1px solid;
+    border-radius:2px;
+}
+
+#botao {
+    padding:7px 10px;
+    cursor:pointer;
+}
+
+
+#resultado {
+    text-align: center;
+    padding:30px;
+    font-size:1.1rem;
+    color:white;
+    z-index:10;
+    position: relative;
+}
+
+#resultado::after {
+    content:"";
+    width:90%;
+    height: 50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(18, 18, 18, 0.5);
+    z-index: -1;
+}
+
+#container2 {
+    align-self: flex-end;
+    z-index:10;
+}
+
+#nova, #mostrarValor {
+    padding:10px;
+    font-size: 0.8rem;
+    z-index:10;
+    cursor:pointer;
+    background:rgba(18, 18, 18, 0.5);
+    color:white;
+    border:none
+}
+
+#mostrarValor {
+    width:80px;
+    height:35px;
+    padding:0 !important;
+}
+
+#nova:hover, #mostrarValor:hover {
+    background:rgba(18, 18, 18, 1);
+}
+
+#nova:active {
+    background:rgba(18, 18, 18, 0.5);
+}
+
+#som {
+    position:absolute;
+    bottom:90px;
+    right:10px;
+    cursor:pointer;
+}
+
+#github {
+    position: absolute;
+    bottom:5px;
+    right:5px;
+    padding:10px 10px 5px 10px;
+    background:rgba(255, 255, 255, 0.1);
+    border-radius:15px 15px 0 15px;
+}
