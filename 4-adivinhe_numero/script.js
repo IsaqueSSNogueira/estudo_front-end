@@ -32,7 +32,7 @@ botao.addEventListener("click", () => {
 
 nova.addEventListener("click", () => {
 
-    aleatorio = Math.round(Math.random());
+    aleatorio = Math.round(Math.random() * 100);
     resultado.textContent = "Digite um número entre 1 e 100";
     mostrarValor.textContent = "Ver número";
     mostrarAleatorio = false;
