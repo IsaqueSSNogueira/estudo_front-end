@@ -1,0 +1,114 @@
+* {padding:0; margin:0; box-sizing:border-box; text-decoration: none; font-size:100%; outline:none;}
+
+body {
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    padding:15px;
+    border:1px solid black;
+    width:250px;
+    height:405px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding:5px 0;
+}
+
+#visor {
+    padding:5px;
+    width:100%;
+    margin:15px 0;
+    text-align: right;
+}
+
+#botoes {
+    display:flex;
+    flex-wrap:wrap;
+    width:230px;
+    gap:6px;
+    justify-content: space-around;
+    position: relative;
+}
+
+button {
+    width:50px;
+    height:50px;
+    cursor: pointer;
+}
+
+button#igual {
+    height:105Px;
+    position: relative;
+    top:0;
+    bottom:0;
+}
+
+#zero {
+    width:113px;
+    margin-left:2px;
+}
+
+#botoes-finais {
+    position:absolute;
+    bottom:-1px;
+    left:2px;
+}
+
+#ce, #limpar {
+    background:rgb(228, 226, 226);
+    border:1px solid gray;
+}
+
+#ce:hover, #limpar:hover {
+    background:rgb(177, 177, 177);
+}
+
+#ce:active, #limpar:active {
+    background:rgb(223, 222, 222);
+}
+
+#zero {
+    background:goldenrod;
+    border:1px solid black;
+}
+
+#zero:hover {
+    background:rgb(203, 146, 0);
+}
+
+#zero:active {
+    background:rgb(156, 118, 21);
+}
+
+#igual {
+    background:rgb(23, 0, 128);
+    border:1px solid black;
+    color:white;
+}
+
+#igual:hover {
+    background:rgb(7, 0, 142);
+    border:1px solid black;
+}
+
+#igual:active {
+    background:rgb(5, 1, 94);
+    border:1px solid black;
+}
+
+#github {
+    position: fixed;
+    bottom:40px;
+    right:90px;
+}
