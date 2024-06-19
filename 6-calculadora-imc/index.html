@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>IMC</title>
+        <meta charser="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+
+        <!-- container 1 -->
+
+        <div class="container">
+
+            <h1>Calculadora IMC</h1>
+
+            <div class="conteudoP">
+                <div class="campo">
+                    <span>Altura</span><input type="number" step="0.01" min="0.01" max="2.50" id="altura" autocomplete="off">
+                </div>
+                <div class="campo">
+                    <span>Peso</span><input type="number" step="0.5" min="10" max="350" id="peso" autocomplete="off">
+                </div>
+            </div>
+            
+            <div id="conteudoS">
+                <button id="analisar">Analisar</button>
+                <button id="limpar">Limpar</button>
+            </div>
+
+        </div>
+
+        <!-- container 2 -->
+
+        <main class="container" id="resultados">
+
+            <h2>Resultados</h2>
+
+            <div class="conteudoR">
+                <span class="spanR" id="alturaR">Altura</span>
+                <span class="spanR" id="pesoR">Peso</span>
+                <span class="spanR" id="imcR">Imc</span>
+                <span class="spanR" id="condicao">Condição</span>
+            </div>
+
+            <button id="refazer">Refazer</button>
+
+        </main>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
