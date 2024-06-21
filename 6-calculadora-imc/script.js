@@ -36,9 +36,9 @@ analisar.addEventListener("click", () => {
 
 function mostrarResultados(v1, v2, v3) {
 
-    alturaR.textContent = v1;
-    pesoR.textContent = v2;
-    imcR.textContent = v3;
+    alturaR.textContent = `Altura - ${v1}`;
+    pesoR.textContent = `Peso - ${v2}`;
+    imcR.textContent = `IMC - ${v3}`;
 
     if(v3 < 18.5){
         condicao.textContent = "Abaixo do peso normal"

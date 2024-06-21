@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Conversor de Moedas</title>
+        <meta charset="UTF-8">
+        <meta name="vieport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+
+        <main>
+            <h1>Conversor de moedas</h1>
+            
+            <div id="container-campo">
+                <span id="real-moeda">R$:</span>
+                <input type="number" id="campo" autocomplete="off">
+            </div>
+
+            <div id="container-moedas">
+              <div class="moeda">
+                <input type="radio" name="moeda" value="dolar" id="dolar" class="radioB"><label for="dolar">Dolar</label>
+              </div>
+              <div class="moeda">
+                <input type="radio" name="moeda" value="euro" id="euro" class="radioB"><label for="euro">Euro</label>
+              </div>
+              <div class="moeda">
+                <input type="radio" name="moeda" value="libra" id="libra" class="radioB"><label for="libra">Libra</label>
+              </div>
+              <div class="moeda">
+                <input type="radio" name="moeda" value="iene" id="iene" class="radioB"><label for="iene">Iene Japonês</label>
+              </div>
+            </div>
+
+            <div id="container-botoes">
+                <button id="converter">Converter</button>
+                <button id="limpar">Limpar</button>
+            </div>
+
+            <div id="container-resultado">
+                <span id="resultado">Resultado</span>
+            </div>
+
+            <span id="atualizado">Atualizado em: 21/06/2024</span>
+
+        </main>
+
+        <div>
+            <a href="https://github.com/IsaqueSSNogueira" target="_black" title="Github - Isaque SS Nogueira"><img id="github" src="../img/github.png" width="80" id="github"></a>
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html> 

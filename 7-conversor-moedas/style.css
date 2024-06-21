@@ -1,0 +1,134 @@
+* {padding:0; margin:0; box-sizing:border-box; text-align: none; font-size: 100%; outline:none; font-family: "Roboto", sans-serif; user-select: none;}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top left, rgba(4,0,63,1) 31%, rgba(192,38,106,1) 100%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border:1px solid black;
+    padding:20px;
+    background:white;
+    border-radius: 20px 0 20px 0;
+}
+
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    padding:20px;
+}
+
+#container-campo {
+    padding:15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#real-moeda {
+    padding:0 10px;
+    font-size: 1.2rem;;
+}
+
+#campo {
+    padding:5px;
+    width:130px;
+    font-size:1.1rem;
+    text-align: center;;
+}
+
+#container-moedas {
+    padding:15px;
+    display:flex;
+    justify-content: center;
+    gap:15px;
+}
+
+label {
+    padding: 0px 10px;
+    font-size:1.15rem;
+}
+
+#container-botoes {
+    display:flex;
+    justify-content: center;
+    gap:15px;
+    padding:15px;
+}
+
+#container-botoes button {
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+#converter {
+    background-color: mediumseagreen;
+    border:1px solid rgb(94, 94, 94);
+    border-radius:2px;
+}
+
+#converter:hover {
+    background-color: rgb(52, 154, 98);
+}
+
+#converter:active{
+    background-color: mediumseagreen;
+}
+
+#converter:disabled {
+    cursor:no-drop;
+} 
+
+#limpar {
+    background-color: red;
+    border:1px solid rgb(94, 94, 94);
+    border-radius:2px;
+}
+
+#limpar:hover {
+    background-color: rgb(236, 1, 1);;
+}
+
+#limpar:active {
+    background-color: red;
+}
+
+#container-resultado {
+    display:flex;
+    justify-content: center;
+    padding:15px;
+}
+
+#resultado {
+    text-align: center;
+    padding:10px 20px;
+    background:rgb(222, 222, 222);
+    width:300px;
+    font-size:1.1rem;
+}
+
+#atualizado {
+    position:absolute;
+    bottom:5px;
+    left:10px;
+    font-size: 0.9rem;
+    color:gray;
+    cursor: default;
+}
+
+#github {
+    position: fixed;
+    bottom:5px;
+    right:5px;
+    background:rgba(255, 255, 255, 0.2);
+    padding:10px;
+    border-radius:5px;
+}
