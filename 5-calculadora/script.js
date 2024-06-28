@@ -13,9 +13,13 @@ botoes.forEach((botao) => {
 })
 
 resultado.addEventListener("click", () => {
+
+    
     let conta = visor.value;
     conta = eval(conta);
+    if(typeof conta !== "undefined"){
     visor.value = conta;
+    }
 })
 
 ce.addEventListener("click", () => {

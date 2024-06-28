@@ -38,7 +38,7 @@ converter.addEventListener("click", () => {
                 break;
         case "iene":
                 resposta = valor / iene;
-                resultado.textContent = resposta.toFixed(2) + " ienes japonese";
+                resultado.textContent = resposta.toFixed(2) + " ienes japoneses";
                 break;
     }
 })

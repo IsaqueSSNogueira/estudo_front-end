@@ -11,6 +11,31 @@ const limpar = document.querySelector("#limpar");
 const refazer = document.querySelector("#refazer");
 
 
+// formatação
+altura.addEventListener("input", () => {
+
+    if(!altura.value.includes(".")){
+        if(altura.value.length === 2){
+            let alturaE = altura.value.slice(0, 1) + "." + altura.value.slice(1);
+            altura.value = alturaE;
+       }
+    }
+
+    maxLength(altura, 4)
+})
+
+peso.addEventListener("input", () => {maxLength(peso, 6)})
+
+
+// max caractere
+function maxLength(input, tamanhoMaximo){
+    if(input.value.length > tamanhoMaximo){
+      let conteudo = input.value.slice(0, tamanhoMaximo);
+      input.value = conteudo;
+    }
+}
+
+// função principal
 analisar.addEventListener("click", () => {
 
     let valor1 = parseFloat(altura.value);
@@ -34,6 +59,7 @@ analisar.addEventListener("click", () => {
     }
 })
 
+// mostrar resultados
 function mostrarResultados(v1, v2, v3) {
 
     alturaR.textContent = `Altura - ${v1}`;
@@ -68,11 +94,13 @@ function mostrarResultados(v1, v2, v3) {
     });
 }
 
+// botao de limpar
 limpar.addEventListener("click", () => {
     altura.value = "";
     peso.value = "";
 })
 
+// botao de refazer / resetar
 refazer.addEventListener("click", () => {
     alturaR.textContent = "Altura";
     pesoR.textContent = "Peso";
