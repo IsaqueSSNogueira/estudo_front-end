@@ -1,3 +1,6 @@
+// Definir os valores atualizados das moedas convertidas pro BRL
+coletarCotacao();
+
 // variaveis principais
 const converter = document.querySelector("#converter");
 const limpar = document.querySelector("#limpar");
@@ -5,10 +8,10 @@ const campo = document.querySelector("#campo");
 const resultado = document.querySelector("#resultado");
 const radioB = document.querySelectorAll(".radioB");
 
-const dolar = 5.43;
-const euro = 5.81;
-const libra = 6.87;
-const iene = 0.034;
+let dolar = 5.43;
+let euro = 5.81;
+let libra = 6.87;
+let iene = 0.034;
 
 let moeda;
 let resposta;
@@ -82,3 +85,22 @@ radioB.forEach((radios) => {
         liberarBotao()
     })
 })
+
+// API
+
+async function coletarCotacao(){
+
+    const urlApi = "https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,GBP-BRL,JPY-BRL";
+    const response = await fetch(urlApi);
+    console.log("Response: ",response);
+    const data = await response.json();
+    console.log("Data: ",data)
+
+    dolar = data.USDBRL.ask;
+    euro = data.EURBRL.ask;
+    libra = data.GBPBRL.ask;
+    iene = data.JPYBRL.ask;
+
+    console.log("Moedas: ",dolar, euro, libra, iene)
+
+}

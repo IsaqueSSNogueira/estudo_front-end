@@ -115,15 +115,6 @@ label {
     font-size:1.1rem;
 }
 
-#atualizado {
-    position:absolute;
-    bottom:5px;
-    left:10px;
-    font-size: 0.9rem;
-    color:gray;
-    cursor: default;
-}
-
 #github {
     position: fixed;
     bottom:5px;
