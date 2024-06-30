@@ -1,0 +1,102 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    outline:none;
+    font-size: 100%;
+    font-family: Helvetica;
+    color:white;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+}
+
+main {
+    border:1px solid gray;
+    padding:20px 10px;
+    border-radius:15px;
+    background-color:#414143;
+    width:250px;
+    height:210px;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+}
+
+#horario {
+    display:flex;
+    justify-content:center;
+    align-items: flex-end;
+    gap:5px;
+    width:100%;
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+#data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:15px;
+}
+
+#diaSemana {
+    font-size: 1.3rem;
+    color:mediumseagreen;
+    text-transform: uppercase;
+}
+
+#calendario {
+    display:flex;
+    align-items: flex-end;
+    gap:5px;
+}
+
+#cidade {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#clima {
+    display:flex;
+    justify-content: center;
+    gap:20px;
+    font-size:1rem;
+}
+
+.climaAreas {
+    display: flex;
+    gap:5px;
+}
+
+.fa-location-dot{
+    color:red;
+}
+
+.fa-temperature-three-quarters {
+    color:gold;
+}
+
+.fa-cloud-rain {
+    color:rgb(113, 113, 255);
+}
+
+#github{
+    background-color:rgba(55, 46, 46,0.2);
+    position: absolute;
+    bottom:10px;
+    right:15px;
+    border-radius: 10px;
+    padding:0 5px;
+}
+
+#github img {
+    width:80px;
+}
