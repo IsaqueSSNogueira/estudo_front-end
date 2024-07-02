@@ -64,7 +64,7 @@ function atualizarData(){
             break;
     }
 
-    let data = [novaData.getDate(), novaData.getMonth(), novaData. getFullYear()];
+    let data = [novaData.getDate(), novaData.getMonth() + 1, novaData. getFullYear()];
 
     data.forEach((item, index) => {
         if (item < 10) {

@@ -1,0 +1,151 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    outline:none;
+    border:none;
+    font-size:100%;
+    font-family:Helvetica;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background-color:rgb(246, 245, 245);
+}
+
+main {
+    border:1.5px solid black;
+    width:500px;
+    height:80vh;
+    display:flex;
+    justify-content: space-between;
+}
+
+#principal {
+    flex-grow:1;
+    background:rgb(255, 255, 255);
+    display:flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    padding:10px;
+    font-size:1.3rem;
+    border-bottom:1px solid black;
+    height:45px;
+}
+
+#tarefas {
+    flex-grow: 1;
+    display: flex;
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+    overflow-y:auto;
+}
+
+#campoTarefa {
+    height:50px;
+    background:rgb(228, 228, 228);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px 20px;
+}
+
+#campoTarefa input {
+    padding:6px 10px;
+    width:280px;
+}
+
+#addTarefa {
+    padding:6px 12px;
+    cursor:pointer;
+    margin-left:5px;
+    background:goldenrod;
+    opacity: 1;
+}
+
+#addTarefa:hover {
+    background:rgb(184, 132, 1);
+}
+
+#addTarefa:active {
+    background:goldenrod;
+}
+
+#addTarefa:disabled {
+    background:#bebebe;
+    cursor:no-drop;
+    border:1px solid gray;
+}
+
+.containerTarefa {
+    width:100%;
+    height:40px;
+    border:1px solid black;
+    background:#eee9e9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 5px;
+}
+
+.marcador {
+    border:1px solid black;
+    width:35px;
+    height: 30px;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.marcador::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    border: solid mediumseagreen;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    left: 10px;
+    top: 3px;
+    opacity:0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.marcador:hover::after {
+    opacity:1;
+}
+
+.tarefa-criada {
+    width:84%;
+    height: 32px;
+    background-color: #eee9e9;
+    padding:0 15px;
+}
+
+.opcoes {
+    padding:10px;
+    cursor:pointer;
+}
+
+.opcoes:hover {
+    background-color: #fcf0f0;
+}
+
+#github {
+    position: absolute;
+    bottom:10px;
+    right: 20px;
+}
+
+#github img {
+    width:60px;
+}
