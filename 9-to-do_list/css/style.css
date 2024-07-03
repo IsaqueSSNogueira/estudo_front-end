@@ -20,8 +20,8 @@ body {
 
 main {
     border:1.5px solid black;
-    width:500px;
-    min-height:80vh;
+    width:650px;
+    height:80vh;
     display:flex;
     justify-content: space-between;
 }
@@ -47,6 +47,7 @@ h1 {
     flex-direction:column;
     gap:15px;
     padding:20px;
+    overflow-y:scroll;
 }
 
 #campoTarefa {
@@ -100,7 +101,7 @@ h1 {
 
 
 .containerTarefa {
-    width:100%;
+    width:83%;
     height:40px;
     border:1px solid black;
     background:#eee9e9;
@@ -110,7 +111,6 @@ h1 {
     padding:10px 5px;
     order:0;
     position: relative;
-    z-index: 1;
 }
 
 .marcador {
@@ -133,11 +133,16 @@ h1 {
     left: 10px;
     top: 3px;
     opacity:0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .marcador:hover::after {
     opacity:1;
+}
+
+.marcador:active::after {
+    opacity:0;
+    transition: none;
 }
 
 .tarefa-criada {
@@ -147,32 +152,20 @@ h1 {
     padding:0 15px;
 }
 
+.tarefa-criada:disabled {
+    color:black;
+}
+
 .opcoes {
     padding:10px;
     cursor:pointer;
+    display:block;
 }
 
 .opcoes:hover {
     background-color:rgba(255, 255, 255, 0.5);
 }
 
-
-
-.concluidaContainer {
-    order:1;
-    opacity: 0.5;
-    justify-content: flex-start;
-    gap:10px;
-}
-
-.concluidaMarcador::after {
-    opacity: 1;
-    border-color: gray;
-}
-
-.concluidaTarefa {
-    text-decoration: line-through;
-}
 
 
 
@@ -184,12 +177,10 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    position: relative;
-    left:40px;
     z-index: 10;
     position: absolute;
     top:8px;
-    left:102.5%;
+    left:103%;
     z-index: 2;
     display:none;
     background:white;
@@ -221,6 +212,11 @@ h1 {
     border:1px solid gray;
     display: inline-block;
     cursor:pointer;
+    opacity:0.7;
+}
+
+.cor:hover {
+    opacity:1;
 }
 
 .cinza {
@@ -252,10 +248,32 @@ h1 {
     padding:3px;
 }
 
+.editarTarefa:hover, .deletarTarefa:hover {
+    color:red;
+}
+
 .mostrar {
     display:block;
 }
 
 .esconder {
     display: none !important;
+}
+
+
+
+.concluidaContainer {
+    order:1;
+    opacity: 0.5;
+    justify-content: flex-start;
+    gap:10px;
+}
+
+.concluidaMarcador::after {
+    opacity: 1;
+    border-color: gray;
+}
+
+.concluidaTarefa {
+    text-decoration: line-through;
 }
