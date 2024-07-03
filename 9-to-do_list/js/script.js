@@ -71,6 +71,7 @@ function renderizarTarefas(dado){
     tarefa.classList.add("tarefa-criada");
     opcoesTarefa.classList.add("opcoes", "fa-solid", "fa-ellipsis");
     tarefa.value = dado;
+    tarefa.placeholder = "Tarefa vazia";
     tarefa.disabled = true;
 
     // adicionar aos elementos pais
@@ -127,23 +128,17 @@ function caixaOpcoes(container, tarefa, opcoes, caixaOpcao, cinza, vermelho, azu
     gold.addEventListener("click", () => {mudarCor(container, "gold")})
     editar.addEventListener("click", () => {editarTarefa(container, tarefa, caixaOpcao)})
     deletar.addEventListener("click", () => {deletarTarefa(container, caixaOpcao)})
+    
+    if(tarefa.classList.contains("concluidaTarefa")){
+        editar.classList.add("esconder")
+        caixaOpcao.classList.add("concluidaCaixaOpcoes")
+    }
+    else{
+        editar.classList.remove("esconder")
+        caixaOpcao.classList.remove("concluidaCaixaOpcoes")
+    }
 
     cliqueForaArea(caixaOpcao, opcoes, tarefa)
-}
-
-function cliqueForaArea(caixaOpcao, opcoes, tarefa){
-
-    document.addEventListener("click", (event) => {
-        if(!caixaOpcao.contains(event.target) && !opcoes.contains(event.target)){
-            caixaOpcao.classList.remove("mostrar")
-        }
-
-        if(tarefa.disabled === false && !tarefa.contains(event.target)){
-            tarefa.disabled = true;
-        }
-
-        })
-
 }
 
 
@@ -153,41 +148,12 @@ function tarefaConcluida(container, marcador, tarefa, opcoes, caixaOpcao){
     marcador.classList.toggle("concluidaMarcador")
     tarefa.disabled = true;
     tarefa.classList.toggle("concluidaTarefa")
-    opcoes.classList.toggle("esconder")
     caixaOpcao.classList.remove("mostrar")
 }
 
 
-function editarTarefa(container, tarefa, caixaOpcao){
-
-    setTimeout(() => {    
-        tarefa.disabled = false;
-        tarefa.focus();
-    }, 100)
-
-    document.addEventListener("keydown", (event) => {
-        if(event.key === "Enter" && tarefa.disabled === false){
-            tarefa.disabled = true;
-        }
-    })
-    caixaOpcao.classList.remove("mostrar");
-}
-
-function deletarTarefa(container, caixaOpcao){
-
-    setTimeout(() => {
-        container.remove();
-    }, 100)
-}
 
 // funções secundárias 
-
-function acaomarcador(){
-    marcador.forEach((i) => {
-        i.addEventListener("mouseover", () => {
-        })
-    })
-}
 
 function mudarCor(campo, cor){
     switch(cor){
@@ -204,4 +170,42 @@ function mudarCor(campo, cor){
             campo.style.backgroundColor = "gold";
             break;
     }
+}
+
+function editarTarefa(container, tarefa, caixaOpcao){
+
+    caixaOpcao.classList.remove("mostrar");
+    
+    setTimeout(() => {    
+        tarefa.disabled = false;
+        tarefa.focus();
+    }, 100)
+
+    document.addEventListener("keydown", (event) => {
+        if(event.key === "Enter" && tarefa.disabled === false){
+            tarefa.disabled = true;
+        }
+    })
+}
+
+function deletarTarefa(container, caixaOpcao){
+
+    setTimeout(() => {
+        container.remove();
+    }, 100)
+}
+
+function cliqueForaArea(caixaOpcao, opcoes, tarefa){
+
+    document.addEventListener("click", (event) => {
+        if(!caixaOpcao.contains(event.target) && !opcoes.contains(event.target)){
+            caixaOpcao.classList.remove("mostrar")
+        }
+
+        if(tarefa.disabled === false && !tarefa.contains(event.target)){
+            tarefa.disabled = true;
+        }
+
+        })
+
 }
