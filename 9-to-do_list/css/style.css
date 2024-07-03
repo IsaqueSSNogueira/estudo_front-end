@@ -21,7 +21,7 @@ body {
 main {
     border:1.5px solid black;
     width:500px;
-    height:80vh;
+    min-height:80vh;
     display:flex;
     justify-content: space-between;
 }
@@ -38,7 +38,7 @@ h1 {
     padding:10px;
     font-size:1.3rem;
     border-bottom:1px solid black;
-    height:45px;
+    min-height:45px;
 }
 
 #tarefas {
@@ -47,7 +47,6 @@ h1 {
     flex-direction:column;
     gap:15px;
     padding:20px;
-    overflow-y:auto;
 }
 
 #campoTarefa {
@@ -86,6 +85,20 @@ h1 {
     border:1px solid gray;
 }
 
+#github {
+    position: fixed;
+    bottom:10px;
+    right: 20px;
+}
+
+#github img {
+    width:60px;
+}
+
+
+/*js*/
+
+
 .containerTarefa {
     width:100%;
     height:40px;
@@ -95,6 +108,9 @@ h1 {
     align-items: center;
     justify-content: space-between;
     padding:10px 5px;
+    order:0;
+    position: relative;
+    z-index: 1;
 }
 
 .marcador {
@@ -125,9 +141,9 @@ h1 {
 }
 
 .tarefa-criada {
-    width:84%;
-    height: 32px;
-    background-color: #eee9e9;
+    width:80%;
+    height: 30px;
+    background-color: #ffffff;
     padding:0 15px;
 }
 
@@ -137,15 +153,109 @@ h1 {
 }
 
 .opcoes:hover {
-    background-color: #fcf0f0;
+    background-color:rgba(255, 255, 255, 0.5);
 }
 
-#github {
+
+
+.concluidaContainer {
+    order:1;
+    opacity: 0.5;
+    justify-content: flex-start;
+    gap:10px;
+}
+
+.concluidaMarcador::after {
+    opacity: 1;
+    border-color: gray;
+}
+
+.concluidaTarefa {
+    text-decoration: line-through;
+}
+
+
+
+.caixaOpcoes {
+    width: 100px;
+    height: 90px;
+    border:1px solid black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    left:40px;
+    z-index: 10;
     position: absolute;
-    bottom:10px;
-    right: 20px;
+    top:8px;
+    left:102.5%;
+    z-index: 2;
+    display:none;
+    background:white;
 }
 
-#github img {
-    width:60px;
+.caixaOpcoes::after {
+    content:'';
+    width:15px;
+    height: 15px;
+    border-width: 1px 0 0 1px;
+    border-color: black;
+    border-style: solid;
+    transform: rotate(-45deg);
+    position: absolute;
+    top:3px;
+    left:-9px;
+}
+
+.cores {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.cor {
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    border:1px solid gray;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.cinza {
+    background-color: #EEE9E9;
+}
+
+.azul {
+    background-color: rgb(170, 170, 253);
+}
+
+.vermelho {
+    background-color: rgb(254, 102, 102);
+}
+
+.gold {
+    background-color: gold;
+}
+
+.mudar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.editarTarefa, .deletarTarefa {
+    cursor:pointer;
+    color:rgb(0, 0, 74);
+    display: block;
+    text-align: center;
+    padding:3px;
+}
+
+.mostrar {
+    display:block;
+}
+
+.esconder {
+    display: none !important;
 }
