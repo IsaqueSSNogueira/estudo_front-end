@@ -184,6 +184,11 @@ function editarTarefa(container, tarefa, caixaOpcao){
     document.addEventListener("keydown", (event) => {
         if(event.key === "Enter" && tarefa.disabled === false){
             tarefa.disabled = true;
+            tarefa.classList.add("editado");
+            setTimeout(()=> {
+                tarefa.classList.remove("editado")
+            }, 
+            1000)
         }
     })
 }
@@ -204,6 +209,11 @@ function cliqueForaArea(caixaOpcao, opcoes, tarefa){
 
         if(tarefa.disabled === false && !tarefa.contains(event.target)){
             tarefa.disabled = true;
+            tarefa.classList.add("editado");
+            setTimeout(()=> {
+                tarefa.classList.remove("editado")
+            }, 
+            300)
         }
 
         })

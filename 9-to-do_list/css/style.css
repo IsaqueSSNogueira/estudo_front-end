@@ -253,6 +253,16 @@ h1 {
     color:red;
 }
 
+.editado {    
+    animation: editado 1s infinite alternate;
+}
+
+@keyframes editado {
+    0% {background-color: rgb(198, 195, 195);}
+    50% {background-color: white;}
+}
+
+
 .mostrar {
     display:block;
 }

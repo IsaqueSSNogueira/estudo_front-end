@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Jogo da Velha</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../../fontawesome/css/all.min.css">
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+
+        <main>
+            <h1><a href="index.html">Jogo da Velha</a></h1>
+            <div id="campo">
+                <button data-botao="1"></button>
+                <button data-botao="2"></button>
+                <button data-botao="3"></button>                
+                <button data-botao="4"></button>
+                <button data-botao="5"></button>
+                <button data-botao="6"></button>                
+                <button data-botao="7"></button>
+                <button data-botao="8"></button>
+                <button data-botao="9"></button>                
+            </div>
+            <span id="jogador-atual">Jogador atual = <span id="indent-jogador">X</span></span>
+        </main>
+
+        <div id="vencedores">
+            <h2>Vitórias <i class="fa-solid fa-trophy"></i></h2>
+            <div id="areaVencedor">
+                <span>Jogador X</span><i class="fa-solid fa-arrow-right"></i><span id="vitoriaX">0</span>
+            </div>
+            <div id="areaVencedor">
+                <span>Jogador O</span><i class="fa-solid fa-arrow-right"></i><span id="vitoriaO">0</span>
+            </div>
+            <a href="index.html" id="resetarVitorias">Reiniciar</a>
+        </div>
+
+        <div id="github"><a href="https://github.com/IsaqueSSNogueira" target="_black"><img src="../img/github.png" alt="Github - Isaque SS Nogueira" title="Github - Isaque SS Nogueira"></a></div>
+
+    </body>
+</html>

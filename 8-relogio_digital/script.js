@@ -81,35 +81,3 @@ function atualizarData(){
 
 atualizarData();
 atualizarHora();
-coletarTemp();
-
-
-/* tô fazendo ainda
-
-async function coletarTemp(){
-
-    const urlTemp = "";
-    const response = await fetch(urlTemp);
-    const data = await response.json();
-    console.log(data)
-}
-
-
-if ("geolocation" in navigator) {
-    // Geolocalização disponível
-    navigator.geolocation.getCurrentPosition(
-        function(position) {
-            let latitude = position.coords.latitude;
-            let longitude = position.coords.longitude;
-            console.log("Latitude:", latitude);
-            console.log("Longitude:", longitude);
-        },
-        function(error) {
-            // Tratamento de erro, se necessário
-            console.error("Erro ao obter localização:", error.message);
-        }
-    );
-} else {
-    // Geolocalização não suportada pelo navegador
-    console.log("Geolocalização não suportada pelo navegador.");
-}*/
