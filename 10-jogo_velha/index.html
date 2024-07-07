@@ -11,6 +11,7 @@
 
     <body>
 
+        <!-- container prinicipal do jogo -->
         <main>
             <h1><a href="index.html">Jogo da Velha</a></h1>
             <div id="campo">
@@ -27,15 +28,32 @@
             <span id="jogador-atual">Jogador atual = <span id="indent-jogador">X</span></span>
         </main>
 
+
+        <!-- definir numero de rodadas-->
+        <div id="rodadas">
+            <h2>Rodadas</h2>
+            <div id="niveis">
+                <div><input type="radio" name="nivel" id="um" class="radio" checked><label for="um">1</label></div>
+                <div><input type="radio" name="nivel" id="tres" class="radio"><label for="tres">3</label></div>
+                <div><input type="radio" name="nivel" id="cinco" class="radio"><label for="cinco">5</label></div>
+            </div>
+        </div>
+
+        <!-- vitórias e resete -->
         <div id="vencedores">
+
             <h2>Vitórias <i class="fa-solid fa-trophy"></i></h2>
-            <div id="areaVencedor">
-                <span>Jogador X</span><i class="fa-solid fa-arrow-right"></i><span id="vitoriaX">0</span>
-            </div>
-            <div id="areaVencedor">
-                <span>Jogador O</span><i class="fa-solid fa-arrow-right"></i><span id="vitoriaO">0</span>
-            </div>
-            <a href="index.html" id="resetarVitorias">Reiniciar</a>
+
+            <!-- placar de vitórias-->
+                <div id="areaVencedor">
+                    <span>Jogador X</span><i class="fa-solid fa-arrow-right"></i><span id="vitoriaX">0</span>
+                </div>
+                <div id="areaVencedor">
+                    <span>Jogador O</span><i class="fa-solid fa-arrow-right"></i><span id="vitoriaO">0</span>
+                </div>
+
+            <!-- resetar-->
+                <span id="resetarVitorias">Reiniciar</span>
         </div>
 
         <div id="github"><a href="https://github.com/IsaqueSSNogueira" target="_black"><img src="../img/github.png" alt="Github - Isaque SS Nogueira" title="Github - Isaque SS Nogueira"></a></div>

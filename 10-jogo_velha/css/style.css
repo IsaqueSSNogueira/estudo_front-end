@@ -19,7 +19,7 @@ body {
 }
 
 main {
-    width:30vw;
+    width:390px;
     height:500px;
     padding:30px 20px;
     border:1px solid black;
@@ -39,6 +39,7 @@ h1 a {
 
 #campo {
     padding:20px 0;
+    width:340px;
     display:flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -57,22 +58,6 @@ button:active {
     border:1px solid black;
 }
 
-#resetarVitorias {
-    background-color: red;
-    color:white;
-    padding:10px;
-    font-size:1rem;
-    margin-top:10px;
-}
-
-#resetarVitorias:hover {
-    background-color: rgb(218, 2, 2);;
-}
-
-#resetarVitorias:active {
-    background-color: red;
-}
-
 #jogador-atual {
     text-align: center;
     display:block;
@@ -80,6 +65,40 @@ button:active {
     font-size:1.1rem;
 }
 
+
+
+/*rodadas*/
+#rodadas {
+    position: absolute;
+    top:20px;
+    left:33px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.3rem;
+}
+
+#niveis{
+    display: flex;
+    gap:15px;
+    justify-content: center;
+    padding:10px 0;
+}
+
+#niveis div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#niveis label {
+    padding:5px;
+    font-size: 1.1rem;
+}
+
+
+
+/*contagem e resete*/
 #vencedores {
     position:absolute;
     bottom:10px;
@@ -111,6 +130,25 @@ h2 {
 .fa-trophy {
     font-size: 1.2rem;
     color:gold;
+}
+
+
+#resetarVitorias {
+    background-color: red;
+    color:white;
+    padding:10px;
+    font-size:1rem;
+    margin-top:10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#resetarVitorias:hover {
+    background-color: rgb(218, 2, 2);;
+}
+
+#resetarVitorias:active {
+    background-color: red;
 }
 
 #github{
