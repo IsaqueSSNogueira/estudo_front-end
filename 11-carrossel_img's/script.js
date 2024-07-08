@@ -1,5 +1,4 @@
 
-const containerImg = document.querySelector("#container-img")
 const botaoLeft = document.querySelector("#leftB")
 const botaoRight = document.querySelector("#rightB")
 const range = document.querySelector("#inputRange")
@@ -15,11 +14,11 @@ function mover(direcao){
 
     if(direcao === "left"){
         position = position - 1;
-        divImg.style.backgroundImage = `url('img/${position}.png')`
+        divImg.style.backgroundImage = `url('../backgrounds/${position}.png')`
     }
     else if(direcao === "right"){
         position = position + 1;
-        divImg.style.backgroundImage = `url('img/${position}.png')`
+        divImg.style.backgroundImage = `url('../backgrounds/${position}.png')`
     }
     controleBotao()
 }
