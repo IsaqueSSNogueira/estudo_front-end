@@ -1,0 +1,212 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    outline:none;
+    font-size:100%;
+    font-family:Helvetica;
+    user-select:none;
+}
+
+body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100vw;
+    height:100vh;
+}
+
+/* partidas */
+
+#partidas {
+    position: absolute;
+    top:20px;
+    left:40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#partidas h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding:15px 0;
+}
+
+#container-das-partidas {
+    display: flex;
+    gap:20px;
+    font-size: 1.1rem;
+}
+
+.container-partida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-partida label {
+    padding:10px 3px;
+}
+
+.container-partida input, .container-partida label {
+    cursor: pointer;
+}
+
+
+
+
+/* status */
+
+#status-container {
+    position: absolute;
+    bottom:15px;
+    left:15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:160px;
+    width:150px;
+    gap:10px;
+}
+
+#status-container h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.fa-trophy {
+    color:gold;
+}
+
+.jogador {
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+
+#status-container span {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.fa-arrow-right {
+    font-size: 0.8rem;
+}
+
+#reiniciar-partida {
+    background-color: red;
+    padding:10px;
+    border:none;
+    color:white;
+    font-weight: bold;
+    cursor:pointer;
+    margin-top: 10px;
+}
+
+#reiniciar-partida:hover {
+    background-color: rgb(229, 0, 0);
+}
+
+/* principal */
+
+main {
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:30px 10px;
+}
+
+h1 {
+    font-size: 1.7rem;
+    border-bottom: 1px solid black;
+    padding:15px;
+    width: 90%;
+    text-align: center;
+}
+
+main span {
+    font-size: 1.1rem;
+}
+
+#celulas {
+    width:360px;
+    height:360px;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    transform: scale(0.85);
+}
+
+.celula {
+    width:120px;
+    height:120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#celula1 {
+    border-width: 0 3px 3px 0;
+    border-style:solid;
+    border-color: black;
+}
+
+#celula3 {
+    border-width: 0 0 3px 3px;
+    border-style:solid;
+    border-color: black;
+}
+
+#celula-meio{
+    outline:3px solid black;
+}
+
+#celula7 {
+    border-width: 3px 3px 0 0;
+    border-style:solid;
+    border-color: black;
+}
+
+#celula9 {
+    border-width: 3px 0 0 3px;
+    border-style:solid;
+    border-color: black;
+}
+
+.botao {
+    width:90%;
+    height:90%;
+    font-size: 2rem;
+    transition: font-size 0.3s ease;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+/* github */
+
+#github {
+    position:absolute;
+    bottom:15px;
+    right:15px;
+}
+
+#github img {
+    width:60px;
+}
+
+
+
+/* js */
+.botao-transition {
+    font-size: 3.5rem;
+    cursor: default;
+}

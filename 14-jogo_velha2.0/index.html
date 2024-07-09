@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Jogo da Velha 2.0</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../../fontawesome/css/all.min.css">
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+
+        <!-- definir partidas -->
+        <div id="partidas">
+            <h2>Partidas</h2>
+            <div id="container-das-partidas">
+                <div class="container-partida">
+                    <input type="radio" name="partida" value="1" class="definir-partida" data-partida="1" checked id="partida1"><label for="partida1">1</label>
+                </div>
+                <div class="container-partida">
+                    <input type="radio" name="partida" value="3" class="definir-partida" data-partida="3" id="partida3"><label for="partida3">3</label>
+                </div>
+                <div class="container-partida">
+                    <input type="radio" name="partida" value="5" class="definir-partida" data-partida="5" id="partida5"><label for="partida5">5</label>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- status -->
+        <div id="status-container">
+            <h2>Vitórias <i class="fa-solid fa-trophy"></i></h2>
+            
+            <div class="jogador">
+                <span>Jogador X</span><i class="fa-solid fa-arrow-right"></i><span id="vitoriasX">0</span>
+            </div>
+            <div class="jogador">
+                <span>Jogador O</span><i class="fa-solid fa-arrow-right"></i><span id="vitoriasO">0</span>
+            </div>
+            
+            <button id="reiniciar-partida">Reiniciar</button>
+        </div>
+
+
+        <!-- container principal -->
+        <main>
+            <h1>Jogo da Velha</h1>
+            <div id="celulas">
+                <div class="celula" id="celula1"><button class="botao" data-botao="1"></button></div>
+                <div class="celula"><button class="botao" data-botao="2"></button></div>
+                <div class="celula" id="celula3"><button class="botao" data-botao="3"></button></div>
+                <div class="celula"><button class="botao" data-botao="4"></button></div>
+                <div class="celula" id="celula-meio"><button class="botao" data-botao="5"></button></div>
+                <div class="celula"><button class="botao" data-botao="6"></button></div>
+                <div class="celula" id="celula7"><button class="botao" data-botao="7"></button></div>
+                <div class="celula"><button class="botao" data-botao="8"></button></div>
+                <div class="celula"  id="celula9"><button class="botao" data-botao="9"></button></div>
+            </div>
+            <span>Jogador Atual = <span id="span-jogadorAtual">X</span></span>
+        </main>
+
+        <!-- link github -->
+        <div id="github">
+            <a href="https://github.com/IsaqueSSNogueira" target="_blank"><img src="../img/github.png" alt="github - Isaque SS Nogueira"></a>
+        </div>
+
+    </body>
+
+</html>
