@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Quiz</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+
+        <main>
+            <!-- tela inicial -->
+            <div id="inicio">
+                <img src="img/pin-piper.png" alt="pin-quiz" id="pin-quiz">
+                <h1>Quiz interativo</h1>
+                <button id="botao-iniciar">Iniciar</button>
+            </div>
+
+            <!-- jogo, tela principal -->
+            <div id="jogo" class="esconder">
+                <h2 id="titulo-pergunta">Exemplo título Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia mollitia</h2>
+                <div id="perguntas-container">
+                    <button class="perguntas" data-alternativa="a" id="altA"></button>
+                    <button class="perguntas" data-alternativa="b" id="altB"></button>
+                    <button class="perguntas" data-alternativa="c" id="altC"></button>
+                    <button class="perguntas" data-alternativa="d" id="altD"></button>
+                </div>
+            </div>
+
+            <!-- tela final -->
+
+            <div id="final" class="esconder">
+                <h2>Fim de jogo</h2>
+                <div id="container-pontuacao">
+                    <span>Pontuação: </span>
+                    <span id="pontuacao-final">00 pontos</span>
+                </div>
+                <button id="botao-reiniciar">Reiniciar</button>
+            </div>
+
+        </main>
+        
+    </body>
+
+</html>
