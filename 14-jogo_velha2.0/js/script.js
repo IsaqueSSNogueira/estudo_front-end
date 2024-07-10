@@ -73,17 +73,16 @@ function verificarJogada(){
     let xGanhou = posicoes.some(linha => linha.every(intem => jogadasX.includes(intem)));
     let oGanhou = posicoes.some(linha => linha.every(intem => jogadasO.includes(intem)));
 
-
-    if(cliques === 9){
-        setTimeout(() => {
-        haVencedor("empate");
-        }, 100);
-    }
-    else if(xGanhou){
+    if(xGanhou){
         haVencedor("X")
     }
     else if(oGanhou){
         haVencedor("O")
+    }
+    else if(cliques === 9){
+        setTimeout(() => {
+        haVencedor("empate");
+        }, 100);
     }
     else{
         trocarJogador();
@@ -127,8 +126,12 @@ function haVencedor(vencedor){
 
 function concluirPartida(vencedor){
 
-    if(partidas === partidasBase){
-        alert(`O jogador '${vencedor}' venceu!`)
+    if(vitoriasO === partidasBase){
+        alert(`O jogador 'O' venceu!`)
+        resetarJogo()
+    }
+    else if(vitoriasX === partidasBase){
+        alert(`O jogador 'X' venceu!`)
         resetarJogo()
     }
     else{
