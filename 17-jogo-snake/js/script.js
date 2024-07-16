@@ -35,8 +35,9 @@ let snake = [
 
 // ctx fruta
 const ctxFruta = canvas.getContext("2d");
-const cor = ["red", "orange", "yellow", "gold", "mediumseagreen", "green", "blue", "lightblue", "purple", "gray", "pink", "silver"]
+const cor = ["#FF073A", "#FF5F1F", "#FFFF33", "gold", "#00FA9A", "#39FF14", "#0FF0FC", "#00FFFF", "#9400D3", "#FF6EC7", "#00FFFF", "#8F00FF", "#FF00FF", "#AFFF00"]
 let corIndice = 1;
+let frutaAtual; // evitar que se repita
 let comeu = false;
 
 
@@ -167,14 +168,30 @@ const reiniciar = () => {
     ]
     direcao = "direita";
     pontuacao = 0;
+    pontuacaoSpan.textContent = pontuacao;
 }
 
 
 // criar frutas
 function criarFrutas(){
 
+    let frutaValida = false;
+
+    while (!frutaValida) {
+        posicaoFrutaX = (Math.round(Math.round(Math.random() * 510) / 30) * 30) + 30;
+        posicaoFrutaY = (Math.round(Math.round(Math.random() * 510) / 30) * 30) + 30;
+
+        frutaValida = !snake.some(posicao => posicao.x === posicaoFrutaX && posicao.y === posicaoFrutaY);
+    }
+
+    fruta = { x: posicaoFrutaX, y: posicaoFrutaY };
+    corIndice = Math.floor(Math.random() * cor.length);
+
+
+    /* guardar para fins de estudo
     // (1) cria o número aleatório entre 0 e 1, multiplica por x, arrendoda pro mais proximo (entre 0 a 600). 
     // (2) Depois (dentro de um Math round externo) divide por 30 e multiplica por 30, pra assim se tornar divisivel por 30;
+   
     let posicaoFrutaX = (Math.round(Math.round(Math.random() * 510) / 30) * 30) + 30; 
     let posicaoFrutaY = (Math.round(Math.round(Math.random() * 510) / 30) * 30) + 30;
     
@@ -190,6 +207,7 @@ function criarFrutas(){
     else{
         criarFrutas()
     }
+    */
 }
 
 
@@ -278,7 +296,7 @@ const alterardificuldade = () => {
         }
     })
     definirPontuacao();
-    nivelDificulade = repeticao === 80 ? "hard" : "medium";
+    nivelDificulade = repeticao === 80 ? "hard" : "medium"; // como só há duas dificuldades, isso irá funcionar
 }
 
 radio.forEach((intem) => {intem.addEventListener("change", () => {
