@@ -109,4 +109,9 @@ refazer.addEventListener("click", () => {
 
     altura.value = "";
     peso.value = "";
+
+    window.scrollTo({
+        top:0, 
+        behavior: 'smooth';
+    });
 })

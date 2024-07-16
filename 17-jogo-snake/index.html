@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Snake Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+
+        <div id="dificuldade-container">
+            <h2>Dificuldade</h2>
+            <div id="nivel-dificuldade">
+                <div class="nivel-container">
+                    <label for="nivel2">Medium</label><input type="radio" name="niveis" id="nivel2" data-rep="200" checked>
+                </div>
+                <div class="nivel-container">
+                    <label for="nivel3">Hard</label><input type="radio" name="niveis" id="nivel3" data-rep="80">
+                </div>
+            </div>
+        </div>
+
+        <div id="recordes-container">
+            <h2 id="titulo-recordes">Recordes <i class="fa-solid fa-trophy"></i></h2>
+            <div class="recordes">
+                <span>Máximo medium</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span id="max-medium">0</span>
+            </div>
+            <div class="recordes">
+                <span>Máximo hard</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span id="max-hard">0</span>
+            </div>
+        </div>
+
+        <div id="tela-inicio" class="tela mostrar">
+            <button id="botao-jogar">Jogar</button>
+        </div>
+
+        <div id="tela-perdeu" class="tela">
+            <button id="botao-reiniciar">Tentar denovo</button>
+        </div>
+
+        <div id="container-pontuacao">
+            <span>Pontuação:</span>
+            <span id="pontuacao-span">0</span>
+        </div>
+
+        <canvas width="600" height="600"></canvas>
+
+    </body>
+
+</html>
