@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Formulário</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+
+
+        <header>
+            <!-- logo -->
+            <div id="container-logo">
+                <a href="index.html" target="_self">
+                    <h1 id="logo" title="S!TE">
+                        <div>
+                            <span id="span-branco">S</span>
+                            <span id="span-escuro">!</span>
+                        </div>
+                        <div>
+                            <span id="span-branco">T</span>
+                            <span id="span-vermelho">E</span>
+                        </div>
+                    </h1>
+                </a>
+            </div>
+
+            <!-- container perfil -->
+            <div id="container-link-perfil">
+                <div class="link-perfil">
+                    <a href="form.html#registrar" target="_self">Cadastre-se grátis</a>
+                </div>
+                <div class="link-perfil">
+                     <a href="form.html#login" target="_self">Entrar</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+        <section id="formulario">
+
+            <h1 id="formulario-titulo">Cadastre-se</h1>
+            <input type="email" class="campo" placeholder="Digite seu email" autocomplete="off">
+            <input type="password" class="campo" placeholder="Digite sua senha" autocomplete="off">
+            <input type="password" class="campo" placeholder="Confirme sua senha" id="confirmar-senha">
+            <a href="recuperarsenha.html" target="_self" id="esqueceu-senha">Esqueceu a senha?</a>
+            <div id="container-termos">
+                <input type="checkbox" id="checkbox-termos">
+                <label for="checkbox-termos">Eu li e aceito os <a id="termos" href="termos.html" target="_blank">termos de uso</a></label>
+            </div>
+            <button id="formulario-botao">Cadastrar</button>
+        </section>
+
+        </main>
+
+    </body>
+
+</html>

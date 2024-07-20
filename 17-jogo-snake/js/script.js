@@ -6,15 +6,18 @@ const canvasY = 600;
 
 const botaoJogar = document.querySelector("#botao-jogar")
 const botaoReiniciar = document.querySelector("#botao-reiniciar")
+const botaoDespausar = document.querySelector("#botao-despausar")
+
+
 const telaInicio = document.querySelector("#tela-inicio")
 const telaPerdeu = document.querySelector("#tela-perdeu")
+const telaPausa = document.querySelector("#tela-pausa")
 
 const radio = document.querySelectorAll("#nivel-dificuldade input")
 const label = document.querySelectorAll("#nivel-dificuldade label")
 
 const pontuacaoSpan = document.querySelector("#pontuacao-span");
 const containerPontuacao = document.querySelector("#container-pontuacao");
-
 
 const spanMaxMedium = document.querySelector("#max-medium");
 const spanMaxHard = document.querySelector("#max-hard");
@@ -169,6 +172,7 @@ const reiniciar = () => {
     direcao = "direita";
     pontuacao = 0;
     pontuacaoSpan.textContent = pontuacao;
+    criarFrutas();
 }
 
 
@@ -270,7 +274,42 @@ function definirBotoes(){
         definirPontuacao()
         definirIntervalo()
     })
+
+    botaoDespausar.addEventListener("click", () => {
+        telaPausa.classList.remove("mostrar")
+        canvas.classList.add("tirar-opacity")
+        definirIntervalo()
+    })
 }
+
+
+// pausar o jogo se cicar fora
+document.addEventListener("click", (event) => {
+
+    if(
+        !telaPerdeu.classList.contains("mostrar") &&
+        !telaInicio.classList.contains("mostrar") &&
+        !telaPausa.classList.contains("mostrar") &&
+        event.target !== canvas &&
+        event.target !== telaInicio && 
+        event.target !== botaoJogar && 
+        event.target !== telaPerdeu && 
+        event.target !== botaoReiniciar && 
+        event.target !== botaoDespausar && 
+        event.target !== label[0] && 
+        event.target !== label[1] && 
+        event.target !== radio[0] && 
+        event.target !== radio[1])
+        {
+        telaPausa.classList.add("mostrar")
+        canvas.classList.remove("tirar-opacity")
+        clearInterval(intervaloMovimento)
+        }
+})
+
+
+
+
 
 // resetar quando muda a dificuldade
 const resetar = () => {
@@ -293,6 +332,7 @@ const alterardificuldade = () => {
         }
         else{
             label[index].classList.remove("dificul-marcada")
+            telaPausa.classList.remove("mostrar")
         }
     })
     definirPontuacao();

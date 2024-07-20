@@ -1,0 +1,182 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    outline:none;
+    text-decoration:none;
+    font-size:100%;
+    font-family:Helvetica;
+    border: none;
+}
+
+
+/*index*/
+
+body {
+    display:flex;
+    max-width:100vw;
+    min-height:100vh;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF4F4;
+    overflow-y:scroll;
+}
+
+header {
+    width:100vw;
+    height:90px;
+    background-color: #B20000;
+    padding:0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+header #container-logo h1 {
+    display: flex;
+    flex-direction: column;
+    font-weight:600;
+    margin-left:10px;
+}
+
+header #container-logo span {
+    font-size: 1.75rem;
+}
+
+header #container-logo #span-branco {
+    color:white;
+}
+
+header #container-logo #span-escuro {
+    color:#760000;
+}
+
+header #container-logo #span-vermelho {
+    color:#FF0000;
+}
+
+
+header #container-link-perfil {
+    display: flex;
+    gap:40px;
+    margin-right: 40px;
+}
+
+header #container-link-perfil a {
+    color: white;
+    transition:all 0.5s ease;
+}
+
+header #container-link-perfil a:hover {
+    color: rgb(255, 0, 0);
+}
+
+
+
+main {
+    flex-grow: 1;
+    padding:50px 0;
+}
+
+
+/*formulario base*/
+
+
+#formulario {
+    width:300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+
+#formulario h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    user-select: none;
+}
+
+#formulario .campo {
+    background-color: transparent;
+    border-bottom: 1px solid gray;
+    width:100%;
+    padding-top: 5px;
+    animation: piscar 0.5s ease 2;
+}
+
+#formulario button {
+    padding:10px 20px;
+    background-color: #B20000;
+    color:white;
+    font-weight:500;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#formulario button:hover {
+    background-color: #d70000;
+}
+
+#formulario button:active {
+    background-color: #B20000;
+}
+
+
+@keyframes piscar {
+    from {
+        background-color: rgb(255, 153, 153);
+}
+    to {
+        background-color: transparent;
+    }
+}
+
+
+/*formulário cadastro*/
+
+#formulario #container-termos {
+    display: flex;
+    align-self: flex-start;
+    gap:8px;
+    padding: 2px 5px;
+    animation: piscar 0.5s ease 2;
+    border-radius: 2px;
+    position: relative;
+    right:5px;
+}
+
+#formulario #termos {
+    color:#e80000;
+
+}
+
+
+
+/*formulário entrar*/
+
+.formulario-entrar {
+    height: 320px !important;
+}
+
+#esqueceu-senha {
+    color:rgb(220, 0, 0);
+    align-self: flex-start;
+}
+
+#esqueceu-senha:hover {
+    color:red;
+}
+
+
+
+/*js*/
+
+.esconder {
+    display: none !important;
+}
