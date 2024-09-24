@@ -74,13 +74,23 @@ header #container-link-perfil a:hover {
     color: rgb(255, 0, 0);
 }
 
+header #container-link-perfil a:active {
+    color: rgb(131, 0, 0);
+}
+
 
 
 main {
-    flex-grow: 1;
+    height:480px;
     padding:50px 0;
+    position: relative;
 }
 
+footer {
+    width:100vw;
+    height:70px;
+    padding:20px 60px;
+}
 
 /*formulario base*/
 
@@ -105,7 +115,6 @@ main {
     border-bottom: 1px solid gray;
     width:100%;
     padding-top: 5px;
-    animation: piscar 0.5s ease 2;
 }
 
 #formulario button {
@@ -143,17 +152,24 @@ main {
 #formulario #container-termos {
     display: flex;
     align-self: flex-start;
-    gap:8px;
+    gap:5px;
     padding: 2px 5px;
-    animation: piscar 0.5s ease 2;
     border-radius: 2px;
     position: relative;
     right:5px;
 }
 
-#formulario #termos {
-    color:#e80000;
+#checkbox-termos {
+    margin-right: 3px;;
+}
 
+#formulario #link-termos {
+    color:#e80000;
+    cursor: pointer;
+}
+
+#formulario #link-termos:hover {
+    color:rgb(255, 21, 0);
 }
 
 
@@ -174,9 +190,158 @@ main {
 }
 
 
+/*caixa dialogo*/
+
+#caixa-dialogo {
+    width:150px;
+    padding:10px;
+    background-color: #c52525;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color:rgb(255, 255, 255);
+    position: absolute;
+    top:195px;
+    left:320px;
+    transition: all 1s ease;
+    box-shadow: rgba(240, 46, 101, 0.3) 4px 4px 3px;
+}
+
+/*125px para para email*/
+/*195px para senha*/
+/*265px para confirme a senha*/
+
+
+#caixa-dialogo::after {
+    content:'';
+    position: absolute;
+    top:4px;
+    left:-6.5px;
+    width:12px;
+    height:12px;
+    transform: rotate(-45deg);
+    border:solid #ff0000;
+    border-width: 1px 0 0 1px;
+    z-index: -1 !important;
+}
+
+
+
+/*termos de uso*/
+
+#container-termos-uso {
+    width:100vw;
+    height:100vh;
+    z-index: 10;
+    background:rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top:0;
+    left:0;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    display:none;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+#container-lista-termos {
+    width:500px;
+    height: 220px;
+    overflow-y:auto;
+    padding: 0 10px 20px 20px;
+}
+
+#termos-uso {
+    width:600px;
+    height:500px;
+    background-color: white;
+    border-radius: 0 0 0 25px;
+    padding:50px;
+    position: relative;
+}
+
+#termos-uso h2 {
+    font-size:1.5rem;
+}
+
+#termos-uso p {
+    margin:40px 0;
+    font-size:1.1rem;
+    text-indent: 10px;
+}
+
+#titulo-lista {
+    margin:15px 0 20px;
+}
+
+#lista-termos {
+    margin:30px 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+#lista-termos li {
+    line-height: 1.5;
+}
+
+#botoes-termos {
+    position: absolute;
+    bottom:20px;
+    right:20px;
+}
+
+#botoes-termos button {
+    width:100px;
+    padding:8px 0;
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+    font-weight: bold;
+    font-size:0.9rem;
+}
+
+#fechar-termos {
+    font-size:0.8rem;
+    position: absolute;
+    top:10px;
+    right:10px;
+    padding:10px;
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#fechar-termos:hover, #botoes-termos button:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+#botoes-termos button:disabled {
+    opacity: 0.8;
+    cursor: default;
+}
+
+#botoes-termos button:disabled:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+
+
+
 
 /*js*/
 
 .esconder {
     display: none !important;
+}
+
+
+.opacidade {
+    opacity:0;
+}
+
+
+.piscar {
+    animation: piscar 0.7s ease 2;
 }

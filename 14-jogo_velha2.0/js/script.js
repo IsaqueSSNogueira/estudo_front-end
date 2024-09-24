@@ -4,6 +4,7 @@ const botoes = document.querySelectorAll(".botao")
 const jogadorSpan = document.querySelector("#span-jogadorAtual")
 const jogadorX = document.querySelector("#vitoriasX")
 const jogadorO = document.querySelector("#vitoriasO")
+const botaoReiniciar = document.querySelector("#reiniciar-partida")
 
 const definirPartidas = document.querySelectorAll(".definir-partida")
 
@@ -62,7 +63,7 @@ function clicou(intem, numeroBotao){
     cliques = cliques + 1;
 
     // verificar jogada
-     trocarJogador();
+    verificarJogada()
     }
 }
 
@@ -84,10 +85,7 @@ function verificarJogada(){
         haVencedor("empate");
         }, 100);
     }
-    else{
-        trocarJogador();
-    }
-
+    trocarJogador();
 }
 
 
@@ -166,6 +164,14 @@ function resetarJogo(){
     jogadorX.textContent = 0;
     reiniciarPartida()
 }
+
+// botão reiniciar
+
+botaoReiniciar.addEventListener("click", () => {
+    resetarJogo();
+})
+
+
 
 // chamar a primeira função
 funcaoInicial()
