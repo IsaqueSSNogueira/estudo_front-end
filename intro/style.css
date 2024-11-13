@@ -51,7 +51,7 @@ header p {
 
 /* Seção de Projetos */
 .projetos {
-    background-color: #ffffff; /* Fundo branco */
+    background-color: #ffffff; 
     padding: 70px 0;
     text-align: center;
     flex-grow: 1;
@@ -61,7 +61,7 @@ header p {
     font-size: 1.5rem;
     padding: 12px 25px;
     text-transform: uppercase;
-    background-color: #6fa3f8; /* Azul mais forte para contraste */
+    background-color: #6fa3f8; 
     color: #fff;
     letter-spacing: 1.2px;
     border-radius: 8px;
@@ -135,7 +135,7 @@ footer {
     text-align: center;
     font-size: 1.1rem;
     box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.1);
-    border-top: 4px solid #b0c8d6; /* Azul claro para a borda superior */
+    border-top: 4px solid #b0c8d6; 
 }
 
 footer p {
@@ -154,18 +154,21 @@ footer a:hover {
     color: #fff;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     header p {
         font-size: 1.1rem;
+        padding: 0 8px;
     }
 
     .projetos h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        padding:15px 40px;
+        margin-bottom: 20px;
     }
 
     .projetos .container {
@@ -178,8 +181,8 @@ footer a:hover {
     }
 
     .projetos li {
-        width: 90%; /* Ajuste para telas pequenas */
-        height: 55px;
+        width: 90%; 
+        height: 70px;
         font-size: 1rem;
     }
 
