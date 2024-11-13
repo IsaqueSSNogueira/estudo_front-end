@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,110 +6,184 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f4f7fc; /* Azul muito claro, quase branco */
+    color: #333; /* Texto escuro */
     line-height: 1.6;
-    width:100vw;
-    height: 100vh;
-    overflow: hidden;
+    width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    overflow-x: hidden;
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #d0e3f0; /* Azul suave */
+    color: #333;
+    padding: 40px 0;
     text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #b0c8d6; /* Azul mais suave na borda */
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 header p {
     font-size: 1.2rem;
-    margin-top: 10px;
+    opacity: 0.8;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 /* Seção de Projetos */
 .projetos {
-    padding: 50px 0;
-    background-color: #fff;
+    background-color: #ffffff; /* Fundo branco */
+    padding: 70px 0;
+    text-align: center;
+    flex-grow: 1;
 }
 
 .projetos h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    background-color: #6fa3f8; /* Azul mais forte para contraste */
+    color: #fff;
+    letter-spacing: 1.2px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: inline-block;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projetos .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
 }
 
 .projetos ul {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .projetos li {
-    background-color: #e1e1e1;
-    border-radius: 5px;
-    width: 250px;
+    background-color: #f2f7fc; 
+    color: #333;
+    border-radius: 10px;
+    width: 240px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
-    width:250px;
-    height:55px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .projetos li:hover {
-    background-color: #4CAF50;
+    background-color:#5899d1; 
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .projetos a {
     text-decoration: none;
     color: #333;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.1rem;
+    display: block;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.3s ease;
 }
 
 .projetos li:hover a {
-    color: white;
+    color: #fff;
 }
-
 
 /* Rodapé */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #b0c8d6; /* Azul claro para a borda superior */
 }
 
 footer p {
-    font-size: 1rem;
+    margin-bottom: 25px;
+    font-weight: 500;
 }
 
 footer a {
-    color: gray;
+    color: #bbb;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: silver;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    .projetos h2 {
+        font-size: 1.6rem;
+    }
+
+    .projetos .container {
+        padding: 0 25px;
+    }
+
+    .projetos ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projetos li {
+        width: 90%; /* Ajuste para telas pequenas */
+        height: 55px;
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
 }
