@@ -109,7 +109,7 @@ const moverSnake = () => {
 
 // Função para determinar a direção com base no movimento de toque
 let startX, startY;
-canvas.addEventListener("touchstart", (event) => {
+body.addEventListener("touchstart", (event) => {
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
 });
