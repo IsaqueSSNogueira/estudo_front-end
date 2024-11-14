@@ -1,6 +1,7 @@
 
 //DOM
 const canvas = document.querySelector("canvas");
+const body = document.querySelector("body");
 const canvasX = 600;
 const canvasY = 600;
 
@@ -383,10 +384,22 @@ radio.forEach((intem) => {intem.addEventListener("change", () => {
 })})
 
 
+function ativarFullscreen() {
+    if (body.requestFullscreen) {
+        body.requestFullscreen();
+    } else if (cbody.webkitRequestFullscreen) { // Para Safari
+        body.webkitRequestFullscreen();
+    } else if (body.msRequestFullscreen) { // Para IE/Edge
+        body.msRequestFullscreen();
+    }
+}
 
+// Adicione o evento ao botão
+document.querySelector("#botao-jogar").addEventListener("click", ativarFullscreen);
 
 // chamar funções base
 desenharSnake();
 criarFrutas();
 definirBotoes()
 alterardificuldade() // iniciar com dificuldade definida
+
