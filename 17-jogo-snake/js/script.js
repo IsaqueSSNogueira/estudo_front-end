@@ -393,6 +393,8 @@ function ativarFullscreen() {
 
 // Adicione o evento ao botão
 document.querySelector("#botao-jogar").addEventListener("click", ativarFullscreen);
+document.querySelector("#botao-despausar").addEventListener("click", ativarFullscreen);
+document.querySelector("#botao-reiniciar").addEventListener("click", ativarFullscreen);
 
 // chamar funções base
 desenharSnake();
