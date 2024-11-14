@@ -106,6 +106,44 @@ const moverSnake = () => {
     }
 }
 
+// Função para determinar a direção com base no movimento de toque
+let startX, startY;
+canvas.addEventListener("touchstart", (event) => {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+});
+
+canvas.addEventListener("touchmove", (event) => {
+    if (!startX || !startY) return;
+
+    let endX = event.touches[0].clientX;
+    let endY = event.touches[0].clientY;
+
+    let diffX = endX - startX;
+    let diffY = endY - startY;
+
+    // Determina se o deslize foi mais horizontal ou vertical
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        // Movimento horizontal
+        if (diffX > 0 && direcao !== "esquerda") {
+            direcao = "direita";
+        } else if (diffX < 0 && direcao !== "direita") {
+            direcao = "esquerda";
+        }
+    } else {
+        // Movimento vertical
+        if (diffY > 0 && direcao !== "cima") {
+            direcao = "baixo";
+        } else if (diffY < 0 && direcao !== "baixo") {
+            direcao = "cima";
+        }
+    }
+
+    // Reseta as coordenadas para o próximo movimento
+    startX = null;
+    startY = null;
+});
+
 
 // movimento cobrinha
 function definirIntervalo(){

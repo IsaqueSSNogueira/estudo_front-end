@@ -27,6 +27,12 @@ body {
     justify-content:center;
     gap:15px;
     color:rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+.container-canvas {
+    position: relative;
+    top:20px;
 }
 
 canvas {
@@ -90,6 +96,7 @@ canvas {
 .tela button{
     padding:5px 15px;
     cursor:pointer;
+    margin-bottom: 25px;
 }
 
 
@@ -109,6 +116,10 @@ canvas {
 #container-pontuacao {
     font-size:1.5rem;
     opacity: 0;
+    position: absolute;
+    top:-50px;
+    left:50%;
+    transform: translateX(-50%);
 }
 
 
@@ -121,8 +132,17 @@ canvas {
     left:15px;
     display: flex;
     flex-direction: column;
-    width:230px;
+    width:max-content;
     padding:10px;
+    justify-content: center;
+    align-items: flex-start;
+    gap:10px;
+}
+
+#recordes-container-filho {
+    display: flex;
+    flex-direction: column;
+    width:max-content;
     justify-content: center;
     align-items: flex-start;
     gap:10px;
@@ -169,4 +189,231 @@ canvas {
 
 .mostrar {
     display:flex;
+}
+
+
+
+
+/*responsivo*/
+
+
+@media only screen and (max-width:1130px) {
+
+    body {
+        align-items: flex-end;
+    }
+
+    .container-canvas {
+        margin-left: 0;
+        margin-right: 22vw;
+    }
+
+    #dificuldade-container {
+        top:80px;
+        left:90px;
+    }
+
+    #recordes-container {
+        bottom:60px;
+        left:65px;
+    }
+
+    #titulo-recordes {
+        align-self: flex-start;
+    }
+}
+
+
+@media only screen and (max-width:1030px) {
+
+    body {
+        align-items: flex-end;
+    }
+
+    .container-canvas {
+        margin-left: 0;
+        margin-right: 15vw;
+    }
+
+    #dificuldade-container {
+        top:80px;
+        left:70px;
+    }
+
+    #recordes-container {
+        bottom:60px;
+        left:50px;
+    }
+
+    #titulo-recordes {
+        align-self: flex-start;
+    }
+}
+
+@media only screen and (max-width:830px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .container-canvas {
+        margin-left: 60px;
+    }
+
+
+/* dificuldade */
+
+    #dificuldade-container {
+        top:80px;
+        left:74vw;
+        font-size:1.15rem;
+    }
+
+
+    .nivel-container {
+        font-size:0.95rem;
+        height:30px;
+    }
+
+
+/*recordes*/
+
+    #recordes-container {
+        bottom:60px;
+        left:72vw;
+    }
+
+    #titulo-recordes {
+        align-self: flex-start;
+        font-size: 1rem;
+
+    }
+
+    #recordes-container span {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+@media only screen and (max-width:730px){
+
+    body {
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .container-canvas {
+        top:50px;
+        transform: scale(0.9);
+    }
+
+    #container-pontuacao {
+        font-size: 1.3rem;
+    }
+
+
+/*dificuldade*/
+
+    #dificuldade-container {
+        top:unset;
+        bottom:20px;
+        left:40px;
+    }
+
+    #nivel-dificuldade {
+        gap:30px;
+        margin-left: -5px;
+        margin-top: 5px;
+    }
+
+    #dificuldade-container h2 {
+        margin-bottom: 5px;
+    }
+
+
+/*recordes*/
+
+    #recordes-container {
+        bottom:unset;
+        left: unset;
+        top:unset;
+        bottom:30px;
+        right:40px;
+    }
+
+    #recordes-container-filho {
+        flex-direction: row;
+    }
+
+    #titulo-recordes{
+        align-self: center;
+    }
+
+    .recordes span {
+        text-transform: capitalize;
+    }
+
+    .responsivo-remover {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width:730px) and (min-height:600px){
+
+    body {
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .container-canvas {
+        top:0;
+        transform: scale(0.9);
+    }
+
+    #container-pontuacao {
+        font-size: 1.3rem;
+    }
+
+
+/*dificuldade*/
+
+    #dificuldade-container {
+        top:30px;
+        bottom:unset;
+        left:30px;
+    }
+
+    #nivel-dificuldade {
+        gap:10px;
+        margin:0;
+    }
+
+/*recordes*/
+
+    #recordes-container {
+        left: 30px;
+        top:unset;
+        bottom:30px;
+        right:unset;
+    }
+
+    #recordes-container-filho {
+        flex-direction:column;
+    }
+
+    #titulo-recordes{
+        align-self: flex-start;
+    }
+
+    .recordes span {
+        text-transform: capitalize;
+    }
+
+    .responsivo-remover {
+        display: inline;
+    }
 }

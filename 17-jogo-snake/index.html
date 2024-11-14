@@ -27,37 +27,50 @@
 
         <div id="recordes-container">
             <h2 id="titulo-recordes">Recordes <i class="fa-solid fa-trophy"></i></h2>
-            <div class="recordes">
-                <span>Máximo medium</span>
-                <i class="fa-solid fa-arrow-right"></i>
-                <span id="max-medium">0</span>
+
+            <div id="recordes-container-filho">
+                <div class="recordes">
+                    <span><span class="responsivo-remover">Máximo</span> medium</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span id="max-medium">0</span>
+                </div>
+                <div class="recordes">
+                    <span><span class="responsivo-remover">Máximo</span> hard</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span id="max-hard">0</span>
+                </div>
             </div>
-            <div class="recordes">
-                <span>Máximo hard</span>
-                <i class="fa-solid fa-arrow-right"></i>
-                <span id="max-hard">0</span>
+
+        </div>
+
+
+
+        <div class="container-canvas">
+
+            <!-- pontuação -->
+            <div id="container-pontuacao">
+                <span>Pontuação:</span>
+                <span id="pontuacao-span">0</span>
             </div>
-        </div>
 
-        <div id="tela-inicio" class="tela mostrar">
-            <button id="botao-jogar">Jogar</button>
-        </div>
+            <!-- canvas -->
+            <canvas width="600" height="600"></canvas>
 
-        <div id="tela-pausa" class="tela">
-            <span>Pausado</span>
-            <button id="botao-despausar">Continuar</button>
-        </div>
+            <!-- telas -->
+            <div id="tela-inicio" class="tela mostrar">
+                <button id="botao-jogar">Jogar</button>
+            </div>
 
-        <div id="tela-perdeu" class="tela">
-            <button id="botao-reiniciar">Tentar denovo</button>
-        </div>
+            <div id="tela-pausa" class="tela">
+                <span>Pausado</span>
+                <button id="botao-despausar">Continuar</button>
+            </div>
 
-        <div id="container-pontuacao">
-            <span>Pontuação:</span>
-            <span id="pontuacao-span">0</span>
-        </div>
+            <div id="tela-perdeu" class="tela">
+                <button id="botao-reiniciar">Tentar denovo</button>
+            </div>
 
-        <canvas width="600" height="600"></canvas>
+        </div>
 
     </body>
 

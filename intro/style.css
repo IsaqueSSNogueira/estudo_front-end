@@ -167,8 +167,9 @@ footer a:hover {
 
     .projetos h2 {
         font-size: 1.5rem;
-        padding:15px 40px;
-        margin-bottom: 20px;
+        padding:15px 0;
+        width:270px;
+        margin-bottom: 15px;
     }
 
     .projetos .container {
@@ -181,8 +182,11 @@ footer a:hover {
     }
 
     .projetos li {
-        width: 90%; 
-        height: 70px;
+        width: 270px; 
+        height: 65px;
+    }
+
+    .projetos a {
         font-size: 1rem;
     }
 
