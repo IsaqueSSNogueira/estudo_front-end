@@ -109,12 +109,12 @@ const moverSnake = () => {
 
 // Função para determinar a direção com base no movimento de toque
 let startX, startY;
-body.addEventListener("touchstart", (event) => {
+document.addEventListener("touchstart", (event) => {
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
 });
 
-canvas.addEventListener("touchmove", (event) => {
+document.addEventListener("touchmove", (event) => {
     if (!startX || !startY) return;
 
     let endX = event.touches[0].clientX;
@@ -345,9 +345,6 @@ document.addEventListener("click", (event) => {
         clearInterval(intervaloMovimento)
         }
 })
-
-
-
 
 
 // resetar quando muda a dificuldade
