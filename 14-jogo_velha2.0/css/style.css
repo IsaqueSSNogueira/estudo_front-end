@@ -270,6 +270,10 @@ main span {
         padding-top:10px;
     }
 
+    .jogador-atual {
+        margin-top: 10px;
+    }
+
     #status-container {
         left:unset;
         bottom: unset;
@@ -314,6 +318,10 @@ main span {
 
     main {
         margin-top:100px;
+    }
+
+    .jogador-atual {
+        margin-top: 15px;
     }
 
     #status-container {
