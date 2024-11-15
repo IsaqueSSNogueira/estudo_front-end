@@ -251,3 +251,11 @@ main, #inicio, #jogo, #final {
         width: 90vw;
     }
 }
+
+
+@media only screen and (max-width:500px) and (min-height:730px){
+
+    #final {
+        padding-bottom: 30px;
+    }
+}
