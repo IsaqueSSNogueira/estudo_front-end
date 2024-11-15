@@ -206,11 +206,64 @@ main span {
 }
 
 
+/*mensagem*/
+
+#fundo-container-mensagem {
+    width:100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.3);
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+}
+
+#container-mensagem {
+    width:350px;
+    height:170px;
+    background-color: white;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:30px;
+    border-radius: 0 10px 0 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#span-mensagem {
+    font-size: 1.2rem;
+}
+
+#botao-fechar-mensagem {
+    padding:10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(131, 147, 235);
+    color: white;
+    font-weight:600;
+    position: absolute;
+    bottom:10px;
+    right:15px;
+    transition: background-color 0.5s ease;
+    border-radius: 5px;
+}
+
+#botao-fechar-mensagem:hover {
+    background-color: rgb(153, 167, 237);
+}
 
 /* js */
 .botao-transition {
     font-size: 3.5rem;
     cursor: default;
+}
+
+.fechar-mensagem {
+    display: none;
 }
 
 

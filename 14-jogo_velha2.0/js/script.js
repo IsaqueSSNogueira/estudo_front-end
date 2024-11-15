@@ -5,9 +5,12 @@ const jogadorSpan = document.querySelector("#span-jogadorAtual")
 const jogadorX = document.querySelector("#vitoriasX")
 const jogadorO = document.querySelector("#vitoriasO")
 const botaoReiniciar = document.querySelector("#reiniciar-partida")
+const fundoContainerMensagem = document.querySelector("#fundo-container-mensagem")
+const spanMensagem = document.querySelector("#span-mensagem")
+const botaoFecharMensagem = document.querySelector("#botao-fechar-mensagem")
+
 
 const definirPartidas = document.querySelectorAll(".definir-partida")
-
 
 // variáveis base
 let jogadorAtual = "X";
@@ -112,7 +115,8 @@ function haVencedor(vencedor){
         concluirPartida(vencedor);
     }
     else if(vencedor === "empate"){
-        alert('Empate na partida!')
+        spanMensagem.textContent = 'Empate na partida!'
+        fundoContainerMensagem.style.display = 'block';
         reiniciarPartida()
     }
     else{
@@ -124,11 +128,13 @@ function haVencedor(vencedor){
 function concluirPartida(vencedor){
 
     if(vitoriasO === partidasBase){
-        alert(`O jogador 'O' venceu!`)
+        spanMensagem.textContent = 'O jogador O venceu!'
+        fundoContainerMensagem.style.display = 'block';
         resetarJogo()
     }
     else if(vitoriasX === partidasBase){
-        alert(`O jogador 'X' venceu!`)
+        spanMensagem.textContent = 'O jogador X venceu!'
+        fundoContainerMensagem.style.display = 'block';
         resetarJogo()
     }
     else{
@@ -185,6 +191,12 @@ function openFullscreen() {
 
 botoes.forEach((element) => {
     element.addEventListener("click", openFullscreen);
+})
+
+
+
+botaoFecharMensagem.addEventListener('click', () => {
+    fundoContainerMensagem.style.display = 'none';
 })
 
 
