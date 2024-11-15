@@ -144,25 +144,20 @@ function reiniciarJogo(){
     telaInicial.classList.remove("esconder");
 }
 
-
-
-// fullscreen
-
-
-function ativarFullscreen() {
-    if (body.requestFullscreen) {
-        body.requestFullscreen();
-    } else if (cbody.webkitRequestFullscreen) { // Para Safari
-        body.webkitRequestFullscreen();
-    } else if (body.msRequestFullscreen) { // Para IE/Edge
-        body.msRequestFullscreen();
+// full screen
+function openFullscreen() {
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.webkitRequestFullscreen) { // Safari
+      document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) { // IE11
+      document.documentElement.msRequestFullscreen();
     }
 }
 
-// Adicione o evento ao botão
-document.querySelector("#botao-iniciar").addEventListener("click", ativarFullscreen);
-document.querySelector("#botao-reiniciar").addEventListener("click", ativarFullscreen);
+botaoIniciar.addEventListener("click", openFullscreen);
+botaoReiniciar.addEventListener("click", openFullscreen);
 
-
+  
 
 funcaoInicial();
