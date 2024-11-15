@@ -88,7 +88,6 @@ body {
     display: flex;
     align-items: center;
     gap:8px;
-    font-weight: 600;
 }
 
 #status-container span {
@@ -391,6 +390,10 @@ main span {
         left:35px;
         transform: scale(0.95);
     }
+
+    .jogador {
+        font-weight: 800;
+    }
 }
 
 
@@ -413,5 +416,9 @@ main span {
         bottom: unset;
         left:40px;
         transform: scale(0.9);
+    }
+    
+    .jogador {
+        font-weight: 800;
     }
 }
