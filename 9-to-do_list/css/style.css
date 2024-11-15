@@ -522,3 +522,17 @@ h1 {
         height: 60px;
     }
 }
+
+@media only screen and (max-width:730px) and (min-height:600px){
+
+    body {
+        height:130vh;
+        align-items: flex-start;
+        padding-top:50px;
+    }
+
+    main {
+        width: 90%;
+        height: 60vh;
+    }
+}
