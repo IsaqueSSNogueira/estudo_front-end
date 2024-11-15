@@ -93,7 +93,6 @@ function verificarJogada(){
 function trocarJogador(){
     jogadorAtual = jogadorAtual === "X" ? "O" : "X";
     jogadorSpan.textContent = jogadorAtual;
-    verificarJogada()
 }
 
 
@@ -113,8 +112,8 @@ function haVencedor(vencedor){
         concluirPartida(vencedor);
     }
     else if(vencedor === "empate"){
-        alert("Empate na rodada")
-        concluirPartida()
+        alert('Empate na partida!')
+        reiniciarPartida()
     }
     else{
         alert("houve um erro ao processar")
@@ -133,7 +132,7 @@ function concluirPartida(vencedor){
         resetarJogo()
     }
     else{
-        reiniciarPartida();
+        reiniciarPartida()
     }
 }
 

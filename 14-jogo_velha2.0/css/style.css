@@ -15,6 +15,8 @@ body {
     align-items:center;
     width:100vw;
     height:100vh;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* partidas */
@@ -209,4 +211,145 @@ main span {
 .botao-transition {
     font-size: 3.5rem;
     cursor: default;
+}
+
+
+
+@media only screen and (max-width:830px){
+    
+
+    body {
+        justify-content: flex-end;
+    }
+
+
+    #github {
+        display: none;
+    }
+
+    main {
+        margin: 0 130px 0 0;
+    }
+
+    #status-container {
+        bottom:25px;
+        transform: scale(0.9);
+    }
+
+    #reiniciar-partida {
+        padding:8px 12px;
+        margin-top: 5px;
+        font-size:0.9rem;
+    }
+}
+
+
+@media only screen and (max-width:740px){
+
+    main {
+        margin: 0 50px 0 0;
+    }
+}
+
+
+@media only screen and (max-width:630px){
+
+    body {
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 100vw;
+        height:120vh;
+    }
+
+    main {
+        margin: 0;
+        border: none;
+    }
+
+    #partidas h2 {
+        padding-top:10px;
+    }
+
+    #status-container {
+        left:unset;
+        bottom: unset;
+        top:90vh;
+        right:60px;
+    }
+
+    #partidas {
+        top:91.5vh;
+        bottom: unset;
+        left:70px;
+    }
+}
+
+
+
+@media only screen and (max-width:500px){
+
+    #status-container {
+        left:unset;
+        bottom: unset;
+        top:90vh;
+        right:30px;
+    }
+
+    #partidas {
+        top:91.5vh;
+        bottom: unset;
+        left:35px;
+        transform: scale(0.95);
+    }
+}
+
+
+
+
+@media only screen and (max-width:730px) and (min-height:730px){
+
+    body {
+        height: 100vh;
+    }
+
+    main {
+        margin-top:100px;
+    }
+
+    #status-container {
+        left:unset;
+        bottom: unset;
+        top:80vh;
+        right:30px;
+    }
+
+    #partidas {
+        top:80.8vh;
+        bottom: unset;
+        left:35px;
+        transform: scale(0.95);
+    }
+}
+
+
+
+@media only screen and (max-width:730px) and (min-height:600px){
+
+    body {
+        height: 100vh;
+    }
+
+    #status-container {
+        left:unset;
+        bottom: unset;
+        top:77vh;
+        right:30px;
+    }
+
+    #partidas {
+        top:77.8vh;
+        bottom: unset;
+        left:40px;
+        transform: scale(0.9);
+    }
 }
