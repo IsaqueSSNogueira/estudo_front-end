@@ -152,6 +152,12 @@ main span {
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.celula:active {
+    background-color: initial;
+    opacity: 1;
 }
 
 #celula1 {
