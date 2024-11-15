@@ -245,6 +245,7 @@ footer {
     opacity: 0;
 }
 
+
 #container-lista-termos {
     width:500px;
     height: 220px;
@@ -253,7 +254,7 @@ footer {
 }
 
 #termos-uso {
-    width:600px;
+    max-width: 600px;
     height:500px;
     background-color: white;
     border-radius: 0 0 0 25px;
@@ -266,7 +267,7 @@ footer {
 }
 
 #termos-uso p {
-    margin:40px 0;
+    margin:40px 0 25px;
     font-size:1.1rem;
     text-indent: 10px;
 }
@@ -298,7 +299,9 @@ footer {
     background-color: rgb(240, 240, 240);
     cursor: pointer;
     font-weight: bold;
-    font-size:0.9rem;
+    font-size:0.8rem;
+    border-radius: 3px;
+    transition: background-color 0.5s ease;
 }
 
 #fechar-termos {
@@ -311,6 +314,9 @@ footer {
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
+    font-size:0.8rem;
+    border-radius: 3px;
+    transition: background-color 0.5s ease;
 }
 
 #fechar-termos:hover, #botoes-termos button:hover {
@@ -327,7 +333,30 @@ footer {
 }
 
 
+/*barras de rolagem*/
+#container-lista-termos {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #a9a8a8 #f1f1f1;
+}
 
+#container-lista-termos::-webkit-scrollbar {
+    width: 8px;
+}
+
+#container-lista-termos::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#container-lista-termos::-webkit-scrollbar-thumb {
+    background: #5bc0de;
+    border-radius: 10px;
+}
+
+#container-lista-termos::-webkit-scrollbar-thumb:hover {
+    background:#39a9cb;
+}
 
 
 /*js*/
@@ -344,4 +373,137 @@ footer {
 
 .piscar {
     animation: piscar 0.7s ease 2;
+}
+
+
+
+
+@media only screen and (max-width:650px) {
+
+    #caixa-dialogo{
+        width:300px;
+        position: absolute !important;
+        opacity: 0.85;
+        top:470px !important;
+        left:50%;
+        transform: translateX(-50%);
+    }
+
+    #caixa-dialogo:hover {
+        opacity: 1;
+    }
+
+    #caixa-dialogo::after {
+        display: none !important;
+    }
+        
+    #termos-uso {
+        max-width: 90vw;
+        padding:50px 30px 0 30px;
+    }
+
+    #container-lista-termos {
+        width:100%;
+        height: 220px;
+        padding: 0 0px 20px 0;
+    }
+
+    #termos-uso h2 {
+        font-size:1.3rem;
+    }
+
+    #termos-uso p {
+        margin:25px 0;
+        font-size:0.95rem;
+        line-height: 22px;
+        text-align: justify;
+        text-justify: inter-word; 
+        hyphens: auto;
+    }
+
+    #titulo-lista {
+        margin:15px 0 20px 5px;
+        font-size: 0.95rem;
+    }
+
+    #lista-termos {
+        margin:30px 0 0 20px;
+        padding-right: 10px;
+    }
+
+    #lista-termos li {
+        line-height: 1.5;
+        text-align: justify;
+        text-justify: inter-word; 
+        hyphens: auto;
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.75rem !important;
+    }
+
+    #fechar-termos {
+        font-size: 0.55rem !important;
+    }
+}
+
+
+@media only screen and (max-width:500px){
+
+    
+    header {
+        width:100vw;
+        height:130px;
+        padding:0 40px 0 30px;
+    }
+
+
+    header #container-link-perfil {
+        display: flex;
+        justify-content: space-between;
+        gap:30px;
+        margin-right: 0px;
+    }
+
+    .remover-responsivo {
+        display: none;
+    }
+
+    #formulario button {
+        border-radius: 5px;
+    }
+
+    #termos-uso h2 {
+        font-size:1.2rem;
+    }
+
+    #termos-uso p {
+        margin:20px 0 10px;
+        font-size:0.85rem;
+        line-height: 22px;
+        text-align: justify;
+        text-justify: inter-word; 
+        hyphens: auto;
+        text-indent: 5px;
+    }
+
+    #titulo-lista {
+        margin:15px 0 0px 5px;
+        font-size: 0.9rem;
+    }
+
+    #lista-termos {
+        gap:15px;
+    }
+
+    #lista-termos li {
+        line-height: 1.5;
+        text-align: justify;
+        text-justify: inter-word; 
+        hyphens: auto;
+        font-size: 0.85rem;
+    }
+
+
 }

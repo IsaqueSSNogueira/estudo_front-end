@@ -128,12 +128,12 @@ function haVencedor(vencedor){
 function concluirPartida(vencedor){
 
     if(vitoriasO === partidasBase){
-        spanMensagem.textContent = 'O jogador /O/ venceu!'
+        spanMensagem.textContent = 'O jogador O venceu!'
         fundoContainerMensagem.style.display = 'block';
         resetarJogo()
     }
     else if(vitoriasX === partidasBase){
-        spanMensagem.textContent = 'O jogador /X/ venceu!'
+        spanMensagem.textContent = 'O jogador X venceu!'
         fundoContainerMensagem.style.display = 'block';
         resetarJogo()
     }
