@@ -1,125 +1,272 @@
-* {padding:0; margin:0; box-sizing:border-box; text-align: none; font-size: 100%; outline:none; font-family: "Roboto", sans-serif; user-select: none;}
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+    outline: none;
+}
+
 
 body {
-    width:100vw;
-    height:100vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top left, rgba(4,0,63,1) 31%, rgba(192,38,106,1) 100%);
+    color: #333;
+    background: linear-gradient(135deg, #f0f4f8, #e6ecf1);
 }
 
+/* Container Principal */
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border:1px solid black;
-    padding:20px;
-    background:white;
-    border-radius: 20px 0 20px 0;
+    padding: 30px;
+    background: #f4fbfb;
+    border-radius: 16px;
+    animation: piscarContainer 1.3s ease infinite alternate;
 }
 
+@keyframes piscarContainer {
+
+    from {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 5px rgba(255, 0, 255, 0.2);
+    }
+    to {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 0, 255, 0.5);
+    }
+}
+
+
+/* Títulos */
 h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
-    padding:20px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
+/* Campos */
 #container-campo {
-    padding:15px;
-    display:flex;
+    padding: 15px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #real-moeda {
-    padding:0 10px;
-    font-size: 1.2rem;;
+    margin: 0 10px;
+    font-size: 1.2rem;
 }
 
 #campo {
-    padding:5px;
-    width:130px;
-    font-size:1.1rem;
-    text-align: center;;
+    padding: 10px;
+    width: 140px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    transition: border-color 0.2s ease-in-out;
 }
 
+#campo:focus {
+    border-color: #c0266a;
+}
+
+/* Seletor de Moedas */
 #container-moedas {
-    padding:15px;
-    display:flex;
+    padding: 15px;
+    display: flex;
     justify-content: center;
-    gap:15px;
+    gap: 20px;
 }
 
 label {
-    padding: 0px 10px;
-    font-size:1.15rem;
+    font-size: 1.1rem;
+    color: #555;
 }
 
+/* Botões */
 #container-botoes {
-    display:flex;
+    display: flex;
     justify-content: center;
-    gap:15px;
-    padding:15px;
+    gap: 15px;
+    padding: 15px;
 }
 
 #container-botoes button {
-    padding:8px 12px;
-    cursor:pointer;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 #converter {
-    background-color: mediumseagreen;
-    border:1px solid rgb(94, 94, 94);
-    border-radius:2px;
+    background-color:mediumseagreen;
 }
 
-#converter:hover {
-    background-color: rgb(52, 154, 98);
-}
-
-#converter:active{
-    background-color: mediumseagreen;
+#converter:hover, #converter:active {
+    background-color:rgb(48, 145, 92);
+    transform: scale(1.05);
 }
 
 #converter:disabled {
-    cursor:no-drop;
-} 
+    background-color: #94d3a2;
+    cursor: not-allowed;
+}
 
 #limpar {
-    background-color: red;
-    border:1px solid rgb(94, 94, 94);
-    border-radius:2px;
+    background-color: #dc3545;
 }
 
-#limpar:hover {
-    background-color: rgb(236, 1, 1);;
+#limpar:hover, #limpar:active {
+    background-color: #c82333;
+    transform: scale(1.05);
 }
-
-#limpar:active {
-    background-color: red;
-}
-
+/* Resultado */
 #container-resultado {
-    display:flex;
+    display: flex;
     justify-content: center;
-    padding:15px;
+    padding: 15px;
 }
 
 #resultado {
     text-align: center;
-    padding:10px 20px;
-    background:rgb(222, 222, 222);
-    width:300px;
-    font-size:1.1rem;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Link GitHub */
 #github {
     position: fixed;
-    bottom:5px;
-    right:5px;
-    background:rgba(255, 255, 255, 0.2);
-    padding:10px;
-    border-radius:5px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+
+/* Esconde os botões de rádio padrão */
+.radioB {
+    display: none;
+}
+
+/* Estilo para o label e a transformação da bolinha em cifrão */
+.radioB + label {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px 0 30px  ; /* Espaço para a bolinha */
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Estilo da bolinha transformada em cifrão */
+.radioB + label:before {
+    content: '$'; /* Adiciona o símbolo de cifrão */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px; /* Tamanho do símbolo de cifrão */
+    color: #333;
+}
+
+/* Quando o rádio está selecionado */
+.radioB:checked + label:before, .radioB:checked + label {
+    color:mediumseagreen !important; /* Cifrão azul quando selecionado */
+    font-weight: 600;
+}
+
+
+/* Efeito quando o rádio é hover */
+.radioB + label:hover, .radioB + label:hover:before  {
+    color: silver; /* Cifrão azul no hover */
+}
+
+
+
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+
+    main {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #campo {
+        width: 120px;
+    }
+
+    #resultado {
+        width: 250px;
+        font-size: 1rem;
+    }
+
+    #github {
+        display: none !important;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    body {
+        padding: 10px;
+    }
+
+    main {
+        width:80vw;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #campo {
+        width: 100px;
+    }
+
+    #container-moedas, #container-botoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #resultado {
+        width: 100%;
+    }
+
+    #github {
+        display: none !important;
+    }
+}
+
+
+
+
+@media only screen and (max-width:730px) and (min-height:630px) {
+
+    body {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
 }
