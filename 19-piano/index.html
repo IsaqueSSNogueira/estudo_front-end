@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>Piano Virtual</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" type="image/png" href="">
+        <script src="js/script.js" defer></script>
+    </head>
+
+    <body>
+
+        <!-- teclado -->
+        <main>
+
+            <!--header-->
+            <header>
+                <h1>Piano Virtual</h1>
+                <div id="containerVolume">
+                    <label>Volume</label>
+                    <input type="range" id="volumeRange" min="0" max="1" step="0.01" value="0.5">
+                </div>
+                <div id="containerMostrarTeclas">
+                    <label for="checkbox">Mostrar Teclas</label>
+                    <input type="checkbox" id="checkbox" checked>
+                </div>
+            </header>
+
+
+            <!-- teclas -->
+            <ul id="containerTeclas">
+                <li class="tecla branca" data-key="a">a</li>
+                <li class="tecla preta" data-key="w">w</li>
+                <li class="tecla branca" data-key="s">s</li>
+                <li class="tecla preta" data-key="e">e</li>
+                <li class="tecla branca" data-key="d">d</li>
+                <li class="tecla branca" data-key="f">f</li>
+                <li class="tecla preta" data-key="t">t</li>
+                <li class="tecla branca" data-key="g">g</li>
+                <li class="tecla preta sumirResponsivo1" data-key="y">y</li>
+                <li class="tecla branca  sumirResponsivo1" data-key="h">h</li>
+                <li class="tecla preta" data-key="u">u</li>
+                <li class="tecla branca" data-key="j">j</li>
+                <li class="tecla branca sumirResponsivo2" data-key="k">k</li>
+                <li class="tecla preta sumirResponsivo2" data-key="o">o</li>
+                <li class="tecla branca sumirResponsivo2" data-key="l">l</li>
+                <li class="tecla preta sumirResponsivo2" data-key="p">p</li>
+                <li class="tecla branca sumirResponsivo2" data-key=";">;</li>
+            </ul>            
+
+        </main>
+
+    </body>
+
+</html>

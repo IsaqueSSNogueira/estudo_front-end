@@ -392,7 +392,7 @@ function openFullscreen() {
     } else if (document.documentElement.msRequestFullscreen) { // IE11
       document.documentElement.msRequestFullscreen();
     }
-  }
+}
 
 // Adicione o evento ao botão
 document.querySelector("#botao-jogar").addEventListener("click", openFullscreen);

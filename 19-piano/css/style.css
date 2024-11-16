@@ -1,0 +1,407 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+    overflow-x: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*base*/
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff, #dcdcdc);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+
+main {
+    width:850px;
+    height:370px;
+    background-color: black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding:30px 40px;
+}
+
+
+
+/*header*/
+header {
+    width: 100%;
+    flex-grow: 1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+h1 {
+    color:rgb(197, 196, 196);
+    font-weight: 400;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/*containers header*/
+#containerVolume, #containerMostrarTeclas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    color:rgb(197, 196, 196);
+}
+
+
+/*volume*/
+
+#containerVolume {
+    flex-shrink: 1;
+}
+
+#volumeRange {
+    width:180px;
+    accent-color: white;
+    outline: none;
+    border-radius: 30px;
+    margin-top: 3px;
+}
+
+
+/*checkbox*/
+#checkbox {
+    appearance: none;
+    width:60px;
+    height: 30px;
+    background-color: rgb(57, 57, 57);
+    border-radius: 20px;
+    position: relative;
+}
+
+#checkbox::after {
+    content: '';
+    width:20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left:6px;
+    transform: translateY(-50%);
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+#checkbox:checked::after {
+    left:34px;
+    opacity: 0.95;
+}
+
+/*teclas*/
+#containerTeclas {
+    width:100%;
+    height:230px;
+    display: flex;
+}
+
+.tecla {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/*branca*/
+.branca {
+    width:10%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(#fff 96%, rgb(176, 176, 176));
+    padding-bottom: 25px;
+    border: 1px solid black;
+    font-weight: light;
+    color: rgb(110, 110, 110);
+}
+
+.branca:active {
+    background: linear-gradient(#ebebeb 96%, rgb(176, 176, 176));
+}
+
+.brancaActive {
+    background: linear-gradient(#ebebeb 96%, rgb(176, 176, 176));
+}
+
+
+/*preta*/
+.preta {
+    width:46px;
+    height: 60%;
+    background-color: black;
+    color:gray;
+    padding-bottom: 15px;
+    border-radius: 0 0 5px 5px;
+    z-index: 2;
+    margin: 0 -23px 0 -23px;
+    background: linear-gradient(to top, black, rgb(52, 52, 52));
+}
+
+.preta:active {
+    background: linear-gradient(to top, rgb(16, 16, 16), rgb(75, 75, 75));
+}
+
+.pretaActive {
+    background: linear-gradient(to top, rgb(16, 16, 16), rgb(75, 75, 75));
+}
+
+
+
+
+/*responsividade*/
+@media only screen and (max-width:870px) {
+
+    main {
+        width: 95vw;
+        padding-top: 20px;
+    }
+
+    header {
+        display: grid;
+        grid-template-areas: 'h1 contMostTecla' 'h1 contVol';
+    }
+
+    h1 {
+        grid-area: h1;
+        margin-left: 10px;
+    }
+
+    #containerVolume {
+        grid-area: contVol;
+    }
+    
+    #containerMostrarTeclas {
+        grid-area: contMostTecla;
+        justify-content: flex-start;
+    }
+
+    #checkbox {
+        transform: scale(0.85);
+    }
+}
+
+
+@media only screen and (max-width:700px) {
+
+    main {
+        padding:20px 20px 30px;
+    }
+
+    h1 {
+        margin-left: 20px;
+    }
+
+
+}
+
+@media only screen and (max-width:600px) { 
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding:20px 5px 30px;
+    }
+
+    #containerVolume, #containerMostrarTeclas {
+        margin-right: 15px;
+        font-size: 0.9rem;
+        gap:5px;
+    }
+
+    #checkbox {
+        transform: scale(0.8);
+    }
+
+    #volumeRange {
+        transform: scale(0.9);
+    }
+
+    #volumeRange {
+        width:150px;
+    }
+
+    .sumirResponsivo1 {
+        display: none;
+    }
+
+    #containerTeclas {
+        width:100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tecla {
+        font-size: 0.95rem;
+    }
+
+    .branca {
+        width:10.5%;
+    }
+
+    .preta {
+        width:38px;
+        margin:0 -19px 0 -19px;
+    }
+
+}
+
+
+@media only screen and (max-width:500px) { 
+
+    h1 {
+        font-size: 1.2rem;
+        margin-left: 25px;
+    }
+
+    main {
+        padding:20px 5px 30px;
+        height:330px;
+    }
+
+    #containerVolume, #containerMostrarTeclas {
+        margin-right: 15px;
+        font-size: 0.8rem;
+    }
+
+    #checkbox {
+        transform: scale(0.7);
+    }
+
+    #volumeRange {
+        transform: scale(0.75);
+        margin-left: -8px;
+    }
+
+    #volumeRange {
+        width:140px;
+    }
+
+    .sumirResponsivo2 {
+        display: none;
+    }
+
+    #containerTeclas {
+        width:100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tecla {
+        font-size: 0.95rem;
+    }
+
+    .branca {
+        width:15%;
+    }
+
+    .preta {
+        width:38px;
+        margin:0 -19px 0 -19px;
+    }
+
+}
+
+
+
+@media only screen and (max-width:450px) { 
+
+    h1 {
+        font-size: 1.1rem;
+        margin-left: 25px;
+    }
+
+    main {
+        padding:20px 5px 30px;
+        height:330px;
+    }
+
+    #containerVolume, #containerMostrarTeclas {
+        margin-right: 15px;
+        font-size: 0.7rem;
+    }
+
+    #checkbox {
+        transform: scale(0.65);
+        margin-left: -5px;
+    }
+
+    #volumeRange {
+        transform: scale(0.75);
+        margin-left: -8px;
+    }
+
+    #volumeRange {
+        width:100px;
+    }
+
+    .sumirResponsivo2 {
+        display: none;
+    }
+
+    #containerTeclas {
+        width:100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tecla {
+        font-size: 0.95rem;
+    }
+}
+
+
+@media only screen and (max-width:450px) { 
+
+    h1 {
+        font-size: 1rem;
+        margin-left: 10px;
+        text-align: center;
+        width: 130px;
+        position: relative;
+        top:3px;
+    }
+
+    .tecla {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media only screen and (max-height:370px){
+
+    main {
+        height: 345px;
+    }    
+}
