@@ -54,6 +54,7 @@ addTarefa.addEventListener("click", () => {
     addTarefa.disabled = true;
     campoInput.blur();
     renderizarTarefas(tarefaDado);
+    salvarTarefas();
 })
 
 
@@ -217,5 +218,29 @@ function cliqueForaArea(caixaOpcao, opcoes, tarefa){
         }
 
         })
-
 }
+
+function salvarTarefas() {
+    const tarefas = Array.from(document.querySelectorAll(".tarefa-criada")).map(tarefa => ({
+        texto: tarefa.value,
+        concluida: tarefa.classList.contains("concluidaTarefa"),
+        cor: tarefa.parentElement.style.backgroundColor || "inherit"
+    }));
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+}
+
+function carregarTarefas() {
+    const tarefasSalvas = JSON.parse(localStorage.getItem("tarefas")) || [];
+    tarefasSalvas.forEach(tarefa => {
+        renderizarTarefas(tarefa.texto);
+        const container = divTarefas.lastChild;
+        if (tarefa.concluida) {
+            container.classList.add("concluidaContainer");
+            container.querySelector(".tarefa-criada").classList.add("concluidaTarefa");
+            container.querySelector(".marcador").classList.add("concluidaMarcador");
+        }
+        container.style.backgroundColor = tarefa.cor;
+    });
+}
+
+carregarTarefas();
