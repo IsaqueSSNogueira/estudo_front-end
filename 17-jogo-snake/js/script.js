@@ -382,12 +382,12 @@ radio.forEach((intem) => {intem.addEventListener("change", () => {
 
 
 function ativarFullscreen() {
-    if (body.requestFullscreen) {
-        body.requestFullscreen();
-    } else if (cbody.webkitRequestFullscreen) { // Para Safari
-        body.webkitRequestFullscreen();
-    } else if (body.msRequestFullscreen) { // Para IE/Edge
-        body.msRequestFullscreen();
+    if (document.requestFullscreen) {
+        document.requestFullscreen();
+    } else if (document.webkitRequestFullscreen) { // Para Safari
+        document.webkitRequestFullscreen();
+    } else if (document.msRequestFullscreen) { // Para IE/Edge
+        document.msRequestFullscreen();
     }
 }
 
