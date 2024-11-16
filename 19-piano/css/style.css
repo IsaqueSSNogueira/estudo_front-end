@@ -81,6 +81,7 @@ h1 {
     outline: none;
     border-radius: 30px;
     margin-top: 3px;
+    background: #555;
 }
 
 
@@ -399,7 +400,7 @@ h1 {
 }
 
 
-@media only screen and (max-height:370px){
+@media only screen and (max-height:450px){
 
     main {
         height: 350px;
