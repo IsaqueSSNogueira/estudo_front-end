@@ -258,4 +258,12 @@ main, #inicio, #jogo, #final {
     #final {
         padding-bottom: 30px;
     }
+
+    main {
+        height:60vh;
+    }
+
+    #jogo {
+        padding:20px;
+    }
 }
