@@ -535,8 +535,8 @@ h1 {
 
     body {
         height:130vh;
-        align-items: flex-start;
-        padding-top:50px;
+        align-items: flex-end;
+        padding-bottom:50px;
     }
 
     main {
