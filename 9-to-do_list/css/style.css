@@ -534,7 +534,7 @@ h1 {
 @media only screen and (max-width:730px) and (min-height:600px){
 
     body {
-        height:130vh;
+        height:100vh;
         align-items: flex-end;
         padding-bottom:50px;
     }
@@ -542,5 +542,19 @@ h1 {
     main {
         width: 90%;
         height: 60vh;
+    }
+
+    .marcador::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 15px;
+        border: solid mediumseagreen;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+        left: 9px;
+        top: 3px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
     }
 }
