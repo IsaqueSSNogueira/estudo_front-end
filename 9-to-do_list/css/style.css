@@ -130,8 +130,16 @@ h1 {
 }
 
 #github img {
-    width: 60px;
+    width: 50px;
+    opacity: 0.6;
+    transition: all 0.7s ease;
 }
+
+#github img:hover {
+    opacity:1;
+}
+
+
 
 /* Tarefa */
 .containerTarefa {
