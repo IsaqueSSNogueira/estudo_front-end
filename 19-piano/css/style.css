@@ -402,6 +402,11 @@ h1 {
 @media only screen and (max-height:370px){
 
     main {
-        height: 345px;
+        height: 350px;
+        padding-top: 15px;
     }    
+
+    #containerMostrarTeclas {
+        margin-bottom: 10px;
+    }
 }
