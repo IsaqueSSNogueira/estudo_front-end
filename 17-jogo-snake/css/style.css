@@ -296,7 +296,7 @@ canvas {
 }
 
 
-@media only screen and (max-width:730px){
+@media only screen and (max-width:730px) and (max-height:600px){
 
     body {
         align-items: center;
@@ -317,19 +317,18 @@ canvas {
 /*dificuldade*/
 
     #dificuldade-container {
-        top:unset;
-        bottom:20px;
-        left:40px;
+        top:468px;
+        left: unset;
+        right:40px;
     }
 
     #nivel-dificuldade {
-        gap:30px;
-        margin-left: -5px;
-        margin-top: 5px;
+        gap:20px;
     }
 
     #dificuldade-container h2 {
         margin-bottom: 5px;
+        color:rgb(255, 153, 19);
     }
 
 
@@ -337,10 +336,8 @@ canvas {
 
     #recordes-container {
         bottom:unset;
-        left: unset;
-        top:unset;
-        bottom:30px;
-        right:40px;
+        top:470px;
+        left:40px;
     }
 
     #recordes-container-filho {
@@ -361,12 +358,16 @@ canvas {
 }
 
 
-@media only screen and (max-width:730px) and (min-height:730px){
+@media only screen and (max-width:730px) and (min-height:600px){
 
     body {
         align-items: center;
         justify-content: center;
         position: relative;
+    }
+
+    #dificuldade-container h2 {
+        color:rgb(255, 153, 19);
     }
 
     .container-canvas {
@@ -398,61 +399,6 @@ canvas {
         left: 30px;
         top:unset;
         bottom:30px;
-        right:unset;
-    }
-
-    #recordes-container-filho {
-        flex-direction:column;
-    }
-
-    #titulo-recordes{
-        align-self: flex-start;
-    }
-
-    .recordes span {
-        text-transform: capitalize;
-    }
-
-    .responsivo-remover {
-        display: inline;
-    }
-}
-
-
-
-@media only screen and (max-width:730px) and (max-height:730px){
-
-    body {
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
-
-    .container-canvas {
-        top:20px;
-        transform: scale(0.9);
-    }
-
-    #container-pontuacao {
-        font-size: 1.2rem;
-    }
-
-
-/*dificuldade*/
-
-    #dificuldade-container {
-        top:20px;
-        bottom:unset;
-        left:30px;
-    }
-
-
-/*recordes*/
-
-    #recordes-container {
-        left: 30px;
-        top:unset;
-        bottom:10px;
         right:unset;
     }
 

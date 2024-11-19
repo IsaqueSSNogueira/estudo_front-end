@@ -27,6 +27,7 @@ function controleBotao(){
 
 campoInput.addEventListener("input", () => {
     controleBotao();
+    salvarTarefas();
 })
 
 addTarefa.addEventListener("mouseover", () => {
@@ -183,13 +184,13 @@ function editarTarefa(container, tarefa, caixaOpcao){
     }, 100)
 
     document.addEventListener("keydown", (event) => {
-        if(event.key === "Enter" && tarefa.disabled === false){
+        if (event.key === "Enter" && tarefa.disabled === false) {
             tarefa.disabled = true;
+            salvarTarefas(); // Salva as alterações ao pressionar Enter.
             tarefa.classList.add("editado");
-            setTimeout(()=> {
-                tarefa.classList.remove("editado")
-            }, 
-            1000)
+            setTimeout(() => {
+                tarefa.classList.remove("editado");
+            }, 1000);
         }
     })
 }
@@ -198,6 +199,7 @@ function deletarTarefa(container, caixaOpcao){
 
     setTimeout(() => {
         container.remove();
+        salvarTarefas();
     }, 100)
 }
 

@@ -7,6 +7,7 @@
     font-size:100%;
     font-family:Helvetica;
     user-select:none;
+    color:white;
 }
 
 body {
@@ -17,6 +18,8 @@ body {
     height:100vh;
     overflow-x: hidden;
     position: relative;
+    background-color: rgb(31, 30, 30);
+    background-image: linear-gradient(45deg, rgb(31, 30, 30),  rgb(42, 41, 41));
 }
 
 /* partidas */
@@ -117,7 +120,7 @@ body {
 /* principal */
 
 main {
-    border:1px solid black;
+    border:1px solid white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,7 +130,7 @@ main {
 
 h1 {
     font-size: 1.7rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     padding:15px;
     width: 90%;
     text-align: center;
@@ -163,29 +166,29 @@ main span {
 #celula1 {
     border-width: 0 3px 3px 0;
     border-style:solid;
-    border-color: black;
+    border-color: white;
 }
 
 #celula3 {
     border-width: 0 0 3px 3px;
     border-style:solid;
-    border-color: black;
+    border-color: white;
 }
 
 #celula-meio{
-    outline:3px solid black;
+    outline:3px solid white;
 }
 
 #celula7 {
     border-width: 3px 3px 0 0;
     border-style:solid;
-    border-color: black;
+    border-color: white;
 }
 
 #celula9 {
     border-width: 3px 0 0 3px;
     border-style:solid;
-    border-color: black;
+    border-color: white;
 }
 
 .botao {
@@ -228,14 +231,14 @@ main span {
 #container-mensagem {
     width:350px;
     height:170px;
-    background-color: white;
+    background-color: rgb(241, 239, 239);
     position: fixed;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding:30px;
     border-radius: 0 10px 0 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(223, 222, 222, 0.5);
     position: relative;
     display: flex;
     justify-content: center;
@@ -243,6 +246,7 @@ main span {
 
 #span-mensagem {
     font-size: 1.2rem;
+    color:black;
 }
 
 #botao-fechar-mensagem {
@@ -419,6 +423,11 @@ main span {
         bottom: unset;
         left:40px;
         transform: scale(0.9);
+    }
+
+    #container-mensagem {
+        width:320px;
+        height: 140px;
     }
 
 }

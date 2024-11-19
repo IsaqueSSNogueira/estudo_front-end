@@ -145,12 +145,17 @@ function reiniciarJogo(){
 }
 
 // full screen
+const larguraJanela = window.innerWidth;
+const alturaJanela = window.innerHeight;
+const larguraResponsiva = 500;
+const alturaResponsiva = 600;
+
 function openFullscreen() {
-    if (document.documentElement.requestFullscreen) {
+    if (document.documentElement.requestFullscreen && larguraJanela <= larguraResponsiva && alturaJanela >= alturaResponsiva) {
       document.documentElement.requestFullscreen();
-    } else if (document.documentElement.webkitRequestFullscreen) { // Safari
+    } else if (document.documentElement.webkitRequestFullscreen && larguraJanela <= larguraResponsiva && alturaJanela >= alturaResponsiva) { // Safari
       document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) { // IE11
+    } else if (document.documentElement.msRequestFullscreen && larguraJanela <= larguraResponsiva && alturaJanela >= alturaResponsiva) { // IE11
       document.documentElement.msRequestFullscreen();
     }
 }
